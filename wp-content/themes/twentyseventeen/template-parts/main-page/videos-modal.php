@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?>
-<div class="row videos-modal page-modal" position="4">
+<div class="row videos-modal page-modal" position="3">
     <div class="row">
 		<div class="col-md-12 title">
 			<div class="title-text">Video</div>
