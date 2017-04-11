@@ -14,12 +14,8 @@
 	// TODO: Set another new menu in wordpress backend
 	// TODO: Check if user has already login (using sessionStorage)
  ?>
-<?php
-	$logo_id = get_theme_mod('custom_logo');
-	$logo_url = wp_get_attachment_image_src($logo_id, 'full')[0];
-?>
 <div class="col-md-offset-2 col-md-1 head-logo-container">
-    <a href="<?php echo home_url(); ?>"><img class="head-logo" src="<?php echo $logo_url ?>" alt="logo"></a>
+    <a href="<?php echo home_url(); ?>"><img class="head_logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/bay-logo.png" alt="intro1"></a>
 </div>
 <?php
 	$menu_name = 'social';
