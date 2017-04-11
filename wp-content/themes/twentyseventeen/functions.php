@@ -433,7 +433,6 @@ function twentyseventeen_scripts() {
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'twentyseventeen-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
 	$twentyseventeen_l10n = array(
 		'quote'          => twentyseventeen_get_svg( array( 'icon' => 'quote-right' ) ),
@@ -445,12 +444,6 @@ function twentyseventeen_scripts() {
 		$twentyseventeen_l10n['collapse']       = __( 'Collapse child menu', 'twentyseventeen' );
 		$twentyseventeen_l10n['icon']           = twentyseventeen_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
 	}
-
-	wp_enqueue_script( 'twentyseventeen-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
-
-	wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
-
-	wp_localize_script( 'twentyseventeen-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -564,3 +557,54 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+// CUSTOM
+add_filter( 'template_include', 'var_template_include', 1000 );
+function var_template_include( $t ){
+    $GLOBALS['current_theme_template'] = basename($t);
+    return $t;
+}
+
+function get_current_template( $echo = false ) {
+    if( !isset( $GLOBALS['current_theme_template'] ) )
+        return false;
+    if( $echo )
+        echo $GLOBALS['current_theme_template'];
+    else
+        return $GLOBALS['current_theme_template'];
+}
+
+
+function bootstrapjquery() {
+	wp_enqueue_style('google-font','https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700');
+	wp_enqueue_style('custom-font', get_template_directory_uri() . '/css/customfont.css');
+	wp_enqueue_script('tether', get_template_directory_uri() . '/js/tether.min.js');
+	wp_enqueue_script('global', get_template_directory_uri() . '/js/global.js');
+	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style('fontAwesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+	wp_enqueue_style('global', get_template_directory_uri() . '/css/global.css');
+	wp_enqueue_script('jquery.3.x', get_template_directory_uri() . '/js/jquery.js');
+	wp_enqueue_script('bootstrap.js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery.3.x'));
+
+	// determine what template is currently use and apply the appropriate css
+	$template = get_current_template();
+	switch ($template) {
+		case 'front-page.php':
+			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
+			break;
+		case 'main-page.php':
+			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
+			break;
+		case 'single-contestants.php':
+			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');
+			break;
+		case 'info-page.php':
+			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/info-page.css');
+			break;
+		default:
+			# code...
+			break;
+	}
+}
+add_action( 'wp_enqueue_scripts', 'bootstrapjquery' );
