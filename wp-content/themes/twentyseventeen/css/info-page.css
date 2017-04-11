@@ -1,0 +1,104 @@
+.header-image {
+    background: url('../assets/images/info-header.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+.more {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.more img {
+    width: 8%
+}
+
+.row.content {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.part {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid thin;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.8vh;
+}
+
+.underline {
+    margin-left: initial;
+    margin-right: initial;
+}
+
+.part .title .text {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    font-size: 3.5vh;
+}
+
+.title .underline {
+    width: 25%;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.part p, .part .image-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sub-part .heading {
+    font-size: 2.2vh;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.sub-part {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.registerBtn button {
+    background-color: #EF4623;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 2.6vh;
+    color: white;
+    border-radius: 25px;
+}
+
+.content-navigation-container {
+    position: relative;
+}
+
+.content-navigation {
+    position: absolute;
+    padding: 0;
+    left: 15px;
+    right: 15px;
+}
+
+.content-navigation li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid thin;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.7vh;
+    cursor: pointer;
+}
+
+.content-navigation li.active {
+    font-weight: 700;
+}
