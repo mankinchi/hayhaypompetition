@@ -9,7 +9,7 @@
  */
 
 ?>
-<div class="col-md-offset-2 col-md-1 head-logo-container">
+<div class="col-md-offset-2 col-md-1 col-xs-3 head-logo-container">
     <a href="<?php echo home_url(); ?>"><img class="head-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/bay-logo.png" alt="intro1"></a>
 </div>
 <?php
@@ -25,30 +25,49 @@
 			$menu_array[] = "<a href=\"". $url . "\">". $title ."</a>";
 		};
 		?>
-		<div class="col-md-3 col-md-offset-1 menu-top-container">
-			<div class="row">
-				<?php
-					for ($i=0; $i <= 2; $i++) {
-						echo "<div class='col-md-4'>" . $menu_array[$i] . "</div>";
-					}
-				?>
-		    </div>
-		</div>
-		<div class="col-md-3 menu-top-container">
-			<div class="row">
-				<?php
-					for ($i=3; $i <= 5; $i++) {
-						echo "<div class='col-md-4'>" . $menu_array[$i] . "</div>";
-					}
-				?>
-				<div class="col-md-4 registerBtnNav">
-					<a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
-				</div>
-		    </div>
-		</div>
+        <div class="col-md-7 col-xs-9">
+            <div class="row">
+                <div class="visible-xs-block visible-sm-block col-xs-3 col-xs-offset-9 moreNav" state="close">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="col-md-12 col-xs-12 menu-top-container">
+        			<div class="row">
+        				<?php
+        					for ($i=0; $i <= 4; $i++) {
+        						echo "<div class='col-md-2 logo-item'>" . $menu_array[$i] . "</div>";
+        					}
+        				?>
+                        <div class="col-md-2 col-md-offset-0 col-xs-5 col-xs-offset-7 logo-item registerBtnNav">
+        					<a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
+        				</div>
+        		    </div>
+        		</div>
+            </div>
+        </div>
 <?php } ?>
 </div>
 <script>
+    // XS menu
+    if ($(".moreNav").innerHeight() != 0) {
+        $(".menu-top-container").hide();
+        $(".moreNav").click(function(event) {
+            if ($(this).attr('state') == 'close') {
+                $(this).attr('state', 'open');
+                $(".menu-top-container").fadeIn();
+            } else {
+                $(this).attr('state', 'close');
+                $(".menu-top-container").fadeOut();
+            };
+            $(this).find('i').toggleClass('fa-times fa-bars');
+        });
+    }
+
+    function hideMenu() {
+        if ($(".moreNav").innerHeight() != 0) {
+            $(".moreNav").trigger('click');
+        }
+    }
+
 	$(".menu-top-container a").eq(<?php echo $id ?>).addClass('active');
 	function switchMenuOption(newPos) {
 		if ($(".menu-top-container a").eq(newPos).hasClass('active') == false) {
@@ -100,30 +119,37 @@
 
 	$(".menu-top-container a").click(function(event) {
 		var index = $(".menu-top-container a").index($(this));
-		if (index != 6) {
-			var index = $(".menu-top-container a").index($(this));
-			if (index == 0 && position != 0) {
-				$('html, body').animate({
-					scrollTop : 0
-				}, 400, function() {
-					showOverlay();
-				});
-			} else if (index != 5) {
-				if (position == 0) {
-					hideOverlay();
-				}
-				position = index;
-				switchMenuOption(position);
-				var element = $("div[position='"+ index +"']");
-				$('html, body').animate({
-					scrollTop : $(element).offset().top - $(".nav-menu-top").innerHeight()
-				}, 400);
-			} else {
-				return true;
-			}
-			return false;
-		} else {
-			return true;
-		}
+        if (index != position) {
+            hideMenu();
+            if (index != 5) {
+                // index = 5 -> Dang Ky
+    			var index = $(".menu-top-container a").index($(this));
+    			if (index == 0 && position != 0) {
+    				$('html, body').animate({
+    					scrollTop : 0
+    				}, 400).promise().then(function() {
+    					showOverlay();
+    				});
+    			} else if (index != 4) {
+                    // index = 4 -> Dang Nhap
+    				if (position == 0 && index != 0) {
+    					hideOverlay();
+    				}
+    				position = index;
+    				switchMenuOption(position);
+    				var element = $("div[position='"+ index +"']");
+    				$('html, body').animate({
+    					scrollTop : $(element).offset().top - $(".nav-menu-top").innerHeight()
+    				}, 400);
+    			} else {
+    				return true;
+    			}
+    			return false;
+    		} else {
+    			return true;
+    		}
+        } else {
+            return false;
+        }
 	});
 </script>

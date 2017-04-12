@@ -1,3 +1,4 @@
+/* XS and lower*/
 @media (max-width:767px) {
     .sponsors-modal .row-2 .logo {
         height: 125%;
@@ -9,5 +10,45 @@
 
     .sponsors-modal {
         padding-top: 10px;
+    }
+}
+
+/* SM and lower */
+@media (max-width:992px) {
+    .head-logo {
+        width: 40%;
+    }
+
+    .moreNav {
+        padding-top: 25px;
+        text-align: right;
+    }
+
+    .moreNav i{
+        font-size: 30px;
+        color: white;
+    }
+
+    .menu-top-container {
+        text-align: right !important;
+        padding-top: 0 !important;
+    }
+
+    .menu-top-container button {
+        margin-top: 0;
+    }
+
+    .menu-top-container .logo-item {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    .news-modal .image-container {
+        padding: 0 15px;
+    }
+
+    .news-modal .news-title {
+        margin-left: 0;
+        padding-left: 15px;
     }
 }

@@ -157,7 +157,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2 content-navigation-container">
+    <div class="col-md-2 hidden-sm hidden-xs content-navigation-container">
         <ul class="content-navigation">
             <li>Giới thiệu chung</li>
             <li>Elite TALKS Inc.</li>

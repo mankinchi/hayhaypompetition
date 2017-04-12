@@ -35,7 +35,7 @@
 	                        </div> -->
 			            </div>
 			        </div>
-			        <div class="col-md-4 sub-news-container">
+			        <div class="col-md-4 hidden-xs hidden-sm sub-news-container">
 			            <div class="row">
 			                <div class="col-md-12 sub-news selected">Ra mắt trang Facebook chính thức của BAY Competition</div>
 			                <!-- <div class="col-md-12 sub-news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique at quam eu tincidunt. Suspendisse feugiat pulvinar tellus vel pharetra.</div>
