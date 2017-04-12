@@ -294,12 +294,12 @@
     transform: translateY(-50%);
     text-align: center;
     color: white;
-    font-size: 5.5vh;
+    font-size: 4.4vh;
 }
 
 .register-modal .text-container p {
     font-family: 'Roboto';
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .register-modal .text-container button {
@@ -309,7 +309,6 @@
     background-color: #EF4623;
     border-radius: 25px;
     padding: 1% 10%;
-    margin-top: -40px;
 }
 
 .register-modal .text-container a {

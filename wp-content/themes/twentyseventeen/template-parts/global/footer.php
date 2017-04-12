@@ -41,14 +41,14 @@
                         <div class="col-md-12 text-container">
                             <div class="text">ĐƠN VỊ ĐỒNG HÀNH</div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="col-md-offset-3 col-md-2 logo">
-                                <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/canthouni.png" alt="logo"></div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-4 logo">
+                                <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/dhct.png" alt="logo"></div>
                             </div>
-                            <div class="col-md-2 logo">
+                            <div class="col-md-4 logo">
                                 <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/swcg.png" alt="logo"></div>
                             </div>
-                            <div class="col-md-2 logo">
+                            <div class="col-md-4 logo">
                                 <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/studymelbourne.png" alt="logo"></div>
                             </div>
                         </div>
@@ -59,20 +59,20 @@
                         <div class="col-md-12 text-container">
                             <div class="text">NHÀ TÀI TRỢ VÀNG</div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="col-md-offset-3 col-md-2 logo">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-4 logo">
                                 <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/ozford.png" alt="logo"></div>
                             </div>
-                            <div class="col-md-2 logo">
+                            <div class="col-md-4 logo">
                                 <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/vodafone.png" alt="logo"></div>
                             </div>
-                            <div class="col-md-2 logo">
-                                <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/landmark.png" alt="logo"></div>
+                            <div class="col-md-4 logo">
+                                <div class="image-container"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/landmarks.png" alt="logo"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="media-sponsor col-md-12">
+                <!-- <div class="media-sponsor col-md-12">
                     <div class="row">
                         <div class="col-md-4 col-md-offset-1">
                             <div class="row">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
