@@ -66,8 +66,8 @@
     font-size: 2.5vh;
     color: white;
     margin-bottom: -10px;
-    font-family: 'Roboto';
-    font-weight: 300;
+    font-family: 'Robotol';
+    /*font-weight: 300;*/
 }
 
 .top-header .more img {
@@ -92,17 +92,21 @@
 }
 
 .bottom-header .first {
-    font-family: 'Roboto Slab';
-    font-weight: 700;
+    font-family: 'RobotoSlabb';
+    /*font-weight: 700;*/
     font-size: 6vh;
 }
 
 .bottom-header .second {
-    font-family: 'Roboto';
-    font-weight: 300;
+    font-family: 'Robotol';
+    /*font-weight: 300;*/
     margin-top: 30px;
     font-size: 2.1vh;
     line-height: 1.8;
+}
+
+.bottom-header .second strong {
+    font-family: 'Robotob';
 }
 
 .bottom-header .underline {
@@ -114,8 +118,8 @@
 }
 
 .bottom-header .more {
-    font-family: 'Roboto';
-    font-weight: 300;
+    font-family: 'Robotol';
+    /*font-weight: 300;*/
     font-size: 2vh;
     background-color: #EF4623;
     border-radius: 25px;
@@ -137,8 +141,8 @@
     margin-bottom: 3%;
     text-align: center;
     font-size: 5.6vh;
-    font-family: 'Roboto Slab';
-    font-weight: 700;
+    font-family: 'RobotoSlabb';
+    /*font-weight: 700;*/
 }
 
 /* CONTESTANT PART - of front page*/
@@ -149,7 +153,7 @@
 }
 
 .contestant-name {
-    font-family: 'Roboto Slab';
+    font-family: 'RobotoSlabr';
     font-size: 2vh;
     padding: 0;
 }
@@ -298,13 +302,13 @@
 }
 
 .register-modal .text-container p {
-    font-family: 'Roboto';
-    font-weight: 100;
+    font-family: 'Robotot';
+    /*font-weight: 100;*/
 }
 
 .register-modal .text-container button {
-    font-family: 'Roboto';
-    font-weight: 300;
+    font-family: 'Robotol';
+    /*font-weight: 300;*/
     font-size: 2vh;
     background-color: #EF4623;
     border-radius: 25px;

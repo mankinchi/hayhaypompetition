@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,700');
-
 @font-face {
     font-family: 'Intro';
     src: url('../assets/fonts/IntroRegular.otf');
@@ -8,4 +6,49 @@
 @font-face {
     font-family: 'IntroThin';
     src: url('../assets/fonts/IntroThin.otf');
+}
+
+@font-face {
+    font-family: 'Robotor';
+    src: url('../assets/fonts/Robotor.ttf');
+}
+
+@font-face {
+    font-family: 'Robotot';
+    src: url('../assets/fonts/Robotot.ttf');
+}
+
+@font-face {
+    font-family: 'Robotom';
+    src: url('../assets/fonts/Robotom.ttf');
+}
+
+@font-face {
+    font-family: 'Robotol';
+    src: url('../assets/fonts/Robotol.ttf');
+}
+
+@font-face {
+    font-family: 'Robotob';
+    src: url('../assets/fonts/Robotob.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoSlabr';
+    src: url('../assets/fonts/RobotoSlabr.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoSlabt';
+    src: url('../assets/fonts/RobotoSlabt.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoSlabl';
+    src: url('../assets/fonts/RobotoSlabl.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoSlabb';
+    src: url('../assets/fonts/RobotoSlabb.ttf');
 }
