@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'sw_bay');
+define('DB_NAME', 'baydcc7f_baycompetition');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'baydcc7f_admin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'l@mg1c0p@ss');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'baycompetition.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
