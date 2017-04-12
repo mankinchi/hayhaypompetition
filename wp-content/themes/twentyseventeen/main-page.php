@@ -53,7 +53,7 @@
                 if ($(".top-header").css('opacity') > 0.5) {
                     event.preventDefault();
                 } else {
-                    if (position != 4) {
+                    if (position != 3) {
                         var checkedPos = position + 1;
                         var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
                         var windowPos = $(window).scrollTop() + $(window).innerHeight();

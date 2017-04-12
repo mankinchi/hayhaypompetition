@@ -16,6 +16,7 @@
         <p class="second">SPEAK YOUR VOICE?</p>
     </div>
     <div class="more">
+        <p>XEM CHI TIẾT</p>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/more.png" alt="rules"/>
     </div>
 </div>

@@ -62,6 +62,14 @@
     cursor: pointer;
 }
 
+.top-header .more p {
+    font-size: 2.5vh;
+    color: white;
+    margin-bottom: -10px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
 .top-header .more img {
     width: 8%
 }
@@ -77,14 +85,13 @@
 
 .bottom-header .text {
     color: white;
-    text-align: justify;
+    text-align: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .bottom-header .first {
-    text-align: center;
     font-family: 'Roboto Slab';
     font-weight: 700;
     font-size: 6vh;
@@ -93,9 +100,8 @@
 .bottom-header .second {
     font-family: 'Roboto';
     font-weight: 300;
-    margin: 0 20%;
     margin-top: 30px;
-    font-size: 1.8vh;
+    font-size: 2.1vh;
     line-height: 1.8;
 }
 
@@ -103,17 +109,17 @@
     width: 30%;
 }
 
+.bottom-header .more-container {
+    padding: 0% 5%;
+}
+
 .bottom-header .more {
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto';
     font-weight: 300;
-    padding: 1% 5%;
-    font-size: 2.5vh;
+    font-size: 2vh;
     background-color: #EF4623;
     border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 20px;
-    display: block;
     color: white;
 }
 
@@ -227,7 +233,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .news-modal .sub-news-container .row {
@@ -297,12 +303,13 @@
 }
 
 .register-modal .text-container button {
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto';
     font-weight: 300;
-    padding: 1% 5%;
-    font-size: 2.5vh;
+    font-size: 2vh;
     background-color: #EF4623;
     border-radius: 25px;
+    padding: 1% 10%;
+    margin-top: -40px;
 }
 
 .register-modal .text-container a {
