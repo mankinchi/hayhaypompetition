@@ -9,53 +9,52 @@
  */
 ?>
 <div class="row videos-modal page-modal" position="3">
-    <div class="row">
-		<div class="col-md-12 title">
-			<div class="title-text">Video</div>
-			<div class="underline"></div>
-		</div>
-	</div>
-    <!-- <div class="row">
-		<div class="image-container coming-soon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/comingsoon.png" alt="logo"></div>
-	</div> -->
-	<div class="row">
-		<div class="col-md-offset-2 col-md-8">
-            <div class="row">
-                <div class="col-md-12 main-video">
-                    <div class="video" link="oNkW9oaCOKM">
-                        <div class="play-button">
-                            <i class="fa fa-play"></i>
+    <div class="col-md-12">
+        <div class="row">
+    		<div class="col-md-12 title">
+    			<div class="title-text">Video</div>
+    			<div class="underline"></div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-offset-2 col-md-8">
+                <div class="row">
+                    <div class="col-md-12 main-video">
+                        <div class="video" link="oNkW9oaCOKM">
+                            <div class="play-button">
+                                <i class="fa fa-play"></i>
+                            </div>
                         </div>
+                        <p class="video-text"><span class="video-title">Teaser Video - </span><span class="video-author">BAY Competition</span></p>
                     </div>
-                    <p class="video-text"><span class="video-title">Teaser Video - </span><span class="video-author">BAY Competition</span></p>
+                    <!-- <div class="col-md-4 sub-video">
+                        <div class="video" link="Xhj5LkjKWb0">
+                            <div class="play-button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
+                    </div>
+                    <div class="col-md-4 sub-video">
+                        <div class="video" link="ghccfubaQ3E">
+                            <div class="play-button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
+                    </div>
+                    <div class="col-md-4 sub-video">
+                        <div class="video" link="czbIeS3R7Ig">
+                            <div class="play-button">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
+                    </div> -->
                 </div>
-                <!-- <div class="col-md-4 sub-video">
-                    <div class="video" link="Xhj5LkjKWb0">
-                        <div class="play-button">
-                            <i class="fa fa-play"></i>
-                        </div>
-                    </div>
-                    <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
-                </div>
-                <div class="col-md-4 sub-video">
-                    <div class="video" link="ghccfubaQ3E">
-                        <div class="play-button">
-                            <i class="fa fa-play"></i>
-                        </div>
-                    </div>
-                    <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
-                </div>
-                <div class="col-md-4 sub-video">
-                    <div class="video" link="czbIeS3R7Ig">
-                        <div class="play-button">
-                            <i class="fa fa-play"></i>
-                        </div>
-                    </div>
-                    <p class="video-text"><span class="video-title">Video 1 - </span><span class="video-author">Nguyễn Văn A</span></p>
-                </div> -->
-            </div>
-		</div>
-	</div>
+    		</div>
+    	</div>
+    </div>
 </div>
 <script type="text/javascript">
     $(".video").hover(function() {

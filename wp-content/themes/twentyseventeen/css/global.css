@@ -161,20 +161,6 @@ a:hover {
     margin: 0% 3%;
 }
 
-@media (max-width:767px) {
-    .sponsors-modal .row-2 .logo {
-        height: 125%;
-    }
-
-    .sponsors-modal .row-3 .logo {
-        height: 60%;
-    }
-
-    .sponsors-modal {
-        padding-top: 10px;
-    }
-}
-
 .sponsors-modal .text {
     font-family: 'Roboto';
     font-weight: 300;
@@ -182,14 +168,16 @@ a:hover {
 }
 
 .copyright {
-    width: 100%;
     text-align: center;
     font-family: 'Roboto';
     font-weight: 300;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
+    left: 0;
+    right: 0;
     bottom: 0;
     color: white;
     background-color: black;
+    font-size: 1vw;
 }

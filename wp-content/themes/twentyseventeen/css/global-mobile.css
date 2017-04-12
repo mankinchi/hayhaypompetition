@@ -1,0 +1,13 @@
+@media (max-width:767px) {
+    .sponsors-modal .row-2 .logo {
+        height: 125%;
+    }
+
+    .sponsors-modal .row-3 .logo {
+        height: 60%;
+    }
+
+    .sponsors-modal {
+        padding-top: 10px;
+    }
+}
