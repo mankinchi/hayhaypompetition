@@ -15,7 +15,7 @@
 	// TODO: Check if user has already login (using sessionStorage)
  ?>
 <div class="col-md-offset-2 col-md-1 head-logo-container">
-    <a href="<?php echo home_url(); ?>"><img class="head-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/bay-logo.png" alt="intro1"></a>
+    <a href="<?php echo home_url(); ?>"><img class="head_logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/bay-logo.png" alt="intro1"></a>
 </div>
 <?php
 	$menu_name = 'social';
@@ -30,11 +30,11 @@
 			$menu_array[] = "<a href=\"". $url . "\">". $title ."</a>";
 		};
 		?>
-        <div class="col-md-3 col-md-offset-1 menu-top-container">
+		<div class="col-md-4 menu-top-container">
 			<div class="row">
 				<?php
-					for ($i=0; $i <= 2; $i++) {
-						echo "<div class='col-md-4'>" . $menu_array[$i] . "</div>";
+					for ($i=0; $i <= 3; $i++) {
+						echo "<div class='col-md-3'>" . $menu_array[$i] . "</div>";
 					}
 				?>
 		    </div>
@@ -42,13 +42,13 @@
 		<div class="col-md-3 menu-top-container">
 			<div class="row">
 				<?php
-					for ($i=3; $i <= 5; $i++) {
+					for ($i=4; $i <= 5; $i++) {
 						echo "<div class='col-md-4'>" . $menu_array[$i] . "</div>";
 					}
 				?>
-				<div class="col-md-4 registerBtnNav">
-					<a href="https://goo.gl/forms/6pcmSsKmDjmE6uAK2" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
-				</div>
+				<div class="col-md-4 registerBtnNav" >
+                    <a href="https://goo.gl/forms/6pcmSsKmDjmE6uAK2" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
+                </div>
 		    </div>
 		</div>
 <?php } ?>

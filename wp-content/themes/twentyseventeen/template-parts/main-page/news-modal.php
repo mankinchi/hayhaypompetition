@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?>
-<div class="row news-modal page-modal" position="2">
+<div class="row news-modal page-modal" position="3">
 	<div class="row">
 		<div class="col-md-12 title">
 			<div class="title-text">Tin tức</div>
