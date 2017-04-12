@@ -42,7 +42,7 @@
 					}
 				?>
 				<div class="col-md-4 registerBtnNav">
-					<a href="https://goo.gl/forms/6pcmSsKmDjmE6uAK2" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
+					<a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn btn-block">ĐĂNG KÝ</button></a>
 				</div>
 		    </div>
 		</div>

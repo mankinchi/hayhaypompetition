@@ -7,7 +7,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
-				<a href="https://goo.gl/forms/6pcmSsKmDjmE6uAK2" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
+				<a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
 			</div>
 		</div>
 	</div>
