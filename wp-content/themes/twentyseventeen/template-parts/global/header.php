@@ -13,7 +13,7 @@
 
     <div class="text">
         <p class="first">Are you ready to</p>
-        <p class="second">SPEAK YOUR VOICE?</p>
+        <p class="second">SPEAK YOUR FUTURE?</p>
     </div>
     <div class="more">
         <p>XEM CHI TIẾT</p>
