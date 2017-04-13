@@ -139,7 +139,7 @@
     				switchMenuOption(position);
     				var element = $("div[position='"+ index +"']");
     				$('html, body').animate({
-    					scrollTop : $(element).offset().top - $(".nav-menu-top").innerHeight()
+    					scrollTop : $(element).offset().top
     				}, 400);
     			} else {
     				return true;

@@ -96,7 +96,9 @@
         position = 0;
     }
 
-    $(".top-header .more").click(function(event) {
-        hideOverlay();
-    });
+    if ($(".moreNav").innerHeight() == 0) {
+        $(".top-header .more").click(function(event) {
+            hideOverlay();
+        });
+    }
 </script>

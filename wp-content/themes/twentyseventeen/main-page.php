@@ -57,18 +57,25 @@
                 }
             } else {
                 // Scroll down
-                if ($(".top-header").css('opacity') > 0.5) {
-                    event.preventDefault();
+                if ($(".moreNav").innerHeight() == 0) {
+                    if ($(".top-header").css('opacity') > 0.5) {
+                        event.preventDefault();
+                    } else {
+                        if (position != 3) {
+                            var checkedPos = position + 1;
+                            var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
+                            var windowPos = $(window).scrollTop() + $(window).innerHeight();
+                            if (windowPos >= limit) {
+                                position = checkedPos;
+                                switchMenuOption(checkedPos);
+                            }
+                        };
+                    }
                 } else {
-                    if (position != 3) {
-                        var checkedPos = position + 1;
-                        var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
-                        var windowPos = $(window).scrollTop() + $(window).innerHeight();
-                        if (windowPos >= limit) {
-                            position = checkedPos;
-                            switchMenuOption(checkedPos);
-                        }
-                    };
+                    // Mobile phone behaviour
+                    if ($(".top-header").css('opacity') > 0.5) {
+                        hideOverlay();
+                    }
                 }
             }
         });

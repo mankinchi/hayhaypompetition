@@ -543,11 +543,9 @@ function bootstrapjquery() {
 	// determine what template is currently use and apply the appropriate css
 	$template = get_current_template();
 	switch ($template) {
-		case 'front-page.php':
-			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
-			break;
 		case 'main-page.php':
 			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
+			wp_enqueue_style('main-mobile', get_template_directory_uri() . '/css/main-mobile.css');
 			break;
 		case 'single-contestants.php':
 			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');

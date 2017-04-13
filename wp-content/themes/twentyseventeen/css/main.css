@@ -32,13 +32,14 @@
 }
 
 .top-header .text {
-    width: 100%;
     text-align: center;
     color: white;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 3
 }
 
 .top-header .first {
@@ -133,8 +134,8 @@
 
 /* All page modal - of front page */
 .page-modal {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 12vh;
+    padding-bottom: 8vh;
 }
 
 .page-modal .title {

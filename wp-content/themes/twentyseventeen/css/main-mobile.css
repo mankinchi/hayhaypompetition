@@ -1,0 +1,14 @@
+@media (max-width:992px) {
+    iframe, .video {
+        height: 50vh !important;
+    }
+
+    .bottom-header {
+        min-height: 100%;
+        height: auto;
+    }
+
+    .bottom-header .text {
+        transform: none;
+    }
+}

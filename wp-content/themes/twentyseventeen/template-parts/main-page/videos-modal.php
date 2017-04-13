@@ -60,8 +60,9 @@
     $(".main-video .video").click(function() {
         var iframe = $("<iframe>", {
             'frameborder': '0',
-            'height': '500px',
+            'height': '70vh',
             'width' : '100%',
+            'padding' : '0% 10px',
             'allowfullscreen' : '',
             'src' : 'https://www.youtube.com/embed/' + $(this).attr('link') + '?autoplay=1'
         });
