@@ -142,7 +142,8 @@
     					scrollTop : $(element).offset().top
     				}, 400);
     			} else {
-    				return true;
+                    // index = 4 -> Dang Nhap
+    				return false;
     			}
     			return false;
     		} else {

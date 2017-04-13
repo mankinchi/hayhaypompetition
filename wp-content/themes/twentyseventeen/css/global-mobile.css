@@ -1,20 +1,22 @@
-/* XS and lower*/
-@media (max-width:767px) {
+/* SM and lower */
+@media (max-width:992px) {
     .sponsors-modal .row-2 .logo {
-        height: 125%;
+        height: 130%;
     }
 
     .sponsors-modal .row-3 .logo {
-        height: 60%;
+        height: 70%;
     }
 
-    .sponsors-modal {
-        padding-top: 10px;
+    .sponsors-modal .logo-container-box {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
-}
 
-/* SM and lower */
-@media (max-width:992px) {
+    .sponsors-modal .copyright {
+        font-size: 2vw;
+    }
+
     .head-logo {
         width: 40%;
     }

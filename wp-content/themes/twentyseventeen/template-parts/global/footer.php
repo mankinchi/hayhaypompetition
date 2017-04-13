@@ -10,7 +10,7 @@
 ?>
 <div class="row sponsors-modal">
     <div class="col-md-12">
-        <div class="row">
+        <div class="row logo-container-box">
             <div class="col-md-offset-2 col-md-8">
                 <div class="row">
                     <div class="main-sponsor col-md-12">

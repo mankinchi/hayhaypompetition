@@ -11,4 +11,42 @@
     .bottom-header .text {
         transform: none;
     }
+
+    .top-header-mobile-container {
+        height: 100%;
+    }
+
+    .top-header-mobile {
+        background: url('../assets/images/microphone.jpg');
+        background-size: cover;
+        background-position: top center;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-header-mobile .text {
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        z-index: 3
+    }
+
+    .top-header-mobile .first {
+        font-family: 'IntroThin';
+        font-size: 6.5vh;
+        margin-bottom: -10px;
+    }
+
+    .top-header-mobile .second {
+        margin-top: 10px;
+        font-family: 'Intro';
+        font-size: 7.5vh;
+        line-height: 1;
+    }
+
 }

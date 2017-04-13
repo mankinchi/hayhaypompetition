@@ -33,19 +33,25 @@
         var position = 0;
 
         $(window).on('wheel', function(event) {
+            console.log(position);
             if (!videoPlayed) {
                 if ($(window).scrollTop() + $(window).innerHeight() >= $(".video").offset().top) {
                     $(".video").trigger('click');
                     videoPlayed = true;
                 }
             }
+            // Window scroll
             if (event.originalEvent.deltaY < 0) {
                 // Scroll up
                 if ($(window).scrollTop() == 0) {
-                    event.preventDefault();
-                    showOverlay();
+                    if ($(".moreNav").innerHeight() != 0) {
+                        animateBigNav();
+                    } else {
+                        event.preventDefault();
+                        showOverlay();
+                    }
                 } else {
-                    if (position != 1) {
+                    if (position >= 1) {
                         var checkedPos = position - 1;
                         var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
                         var windowPos = $(window).scrollTop();
@@ -57,25 +63,21 @@
                 }
             } else {
                 // Scroll down
-                if ($(".moreNav").innerHeight() == 0) {
-                    if ($(".top-header").css('opacity') > 0.5) {
-                        event.preventDefault();
-                    } else {
-                        if (position != 3) {
-                            var checkedPos = position + 1;
-                            var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
-                            var windowPos = $(window).scrollTop() + $(window).innerHeight();
-                            if (windowPos >= limit) {
-                                position = checkedPos;
-                                switchMenuOption(checkedPos);
-                            }
-                        };
-                    }
+                if ($(".top-header").css('opacity') > 0.5 && $(".moreNav").innerHeight() == 0) {
+                    event.preventDefault();
                 } else {
-                    // Mobile phone behaviour
-                    if ($(".top-header").css('opacity') > 0.5) {
-                        hideOverlay();
+                    if (position == 0) {
+                        animateSmallNav();
                     }
+                    if (position <= 2) {
+                        var checkedPos = position + 1;
+                        var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
+                        var windowPos = $(window).scrollTop() + $(window).innerHeight();
+                        if (windowPos >= limit) {
+                            position = checkedPos;
+                            switchMenuOption(checkedPos);
+                        }
+                    };
                 }
             }
         });
