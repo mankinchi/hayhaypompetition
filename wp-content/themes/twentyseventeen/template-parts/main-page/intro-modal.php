@@ -16,7 +16,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-4 more-container">
-                <a href="http://baycompetition.com/index.php/gioi-thieu/"><button type="button" class="btn btn-block more">CHI TIẾT CUỘC THI</button></a>
+                <a href="http://bit.ly/2pwlx3p"><button type="button" class="btn btn-block more">CHI TIẾT CUỘC THI</button></a>
             </div>
         </div>
     </div>
