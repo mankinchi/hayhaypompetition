@@ -13,6 +13,9 @@
     <div class="text">
         <p class="first">Are you ready to</p>
         <p class="second">SPEAK YOUR FUTURE?</p>
+        <br />
+        <p class="third">Vòng Audition</p>
+        <p class="fourth">17/4 - 30/5</p>
     </div>
     <div class="more">
         <p>XEM CHI TIẾT</p>
@@ -25,6 +28,9 @@
         <div class="text">
             <p class="first">Are you ready to</p>
             <p class="second">SPEAK YOUR FUTURE?</p>
+            <br />
+            <p class="third">Vòng Audition</p>
+            <p class="fourth">17/4 - 30/5</p>
         </div>
     </div>
 </div>

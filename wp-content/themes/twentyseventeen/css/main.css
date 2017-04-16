@@ -44,13 +44,24 @@
 
 .top-header .first {
     font-family: 'IntroThin';
-    font-size: 6.5vh;
+    font-size: 3.4vw;
     margin-bottom: -10px;
 }
 
 .top-header .second {
     font-family: 'Intro';
-    font-size: 7.5vh;
+    font-size: 3.9vw;
+}
+
+.top-header .third {
+    font-family: 'IntroThin';
+    font-size: 3vw;
+    margin-bottom: -10px;
+}
+
+.top-header .fourth {
+    font-family: 'Intro';
+    font-size: 2vw;
 }
 
 .top-header .more {

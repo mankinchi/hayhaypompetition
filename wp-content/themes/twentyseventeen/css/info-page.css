@@ -5,6 +5,27 @@
     background-attachment: fixed;
 }
 
+.text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    padding-left: 10%;
+}
+
+.text .first {
+    font-family: 'IntroThin';
+    font-size: 5vw;
+    margin-bottom: -10px;
+}
+
+.text .second {
+    font-family: 'Intro';
+    font-size: 4vw;
+}
+
 .more {
     position: absolute;
     bottom: 40px;

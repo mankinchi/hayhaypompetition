@@ -1,4 +1,21 @@
 @media (max-width:992px) {
+    .text {
+        height: 85%;
+        align-items: center;
+        
+    }
+
+    .text .first {
+        font-family: 'IntroThin';
+        font-size: 13vw;
+        margin-bottom: -10px;
+    }
+
+    .text .second {
+        font-family: 'Intro';
+        font-size: 10vw;
+    }
+
     .moreNav {
         padding-top: 18px !important;
         text-align: right;

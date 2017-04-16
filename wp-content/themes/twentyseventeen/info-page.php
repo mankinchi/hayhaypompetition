@@ -13,6 +13,10 @@
     get_header();
 ?>
 <div class="row header-image">
+    <div class="text">
+        <div class="first">Vòng Audition</div>
+        <div class="second">17/4 - 30/5</div>
+    </div>
     <div class="more">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/more.png" alt="rules"/>
     </div>

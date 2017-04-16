@@ -49,4 +49,14 @@
         line-height: 1;
     }
 
+    .top-header-mobile .third {
+        font-family: 'IntroThin';
+        font-size: 9vw;
+        margin-bottom: -10px;
+    }
+
+    .top-header-mobile .fourth {
+        font-family: 'Intro';
+        font-size: 6vw;
+    }
 }
