@@ -5,7 +5,7 @@
     background-attachment: fixed;
 }
 
-.text {
+.header-image .text {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -105,6 +105,10 @@
 .sub-part {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.sub-part .no-dot {
+    list-style-type: none;
 }
 
 .registerBtn button {

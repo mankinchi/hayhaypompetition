@@ -48,9 +48,9 @@
                             </div>
                             <div class="col-md-10 col-md-offset-1 logo-container-row">
                                 <div class="row-2">
-                                    <div class="logo dhct">
+                                    <!-- <div class="logo dhct">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/dhct.png" alt="logo">
-                                    </div>
+                                    </div> -->
                                     <div class="logo sw">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/sw.png" alt="logo">
                                     </div>

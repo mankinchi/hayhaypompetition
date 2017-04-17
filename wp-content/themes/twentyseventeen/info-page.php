@@ -40,15 +40,10 @@
                             <li>
                                 <div class="">Thí sinh:</div>
                                 <ul>
-                                    <li>
-                                        <div class="">Vòng Audition: 17/4- 30/5</div>
-                                    </li>
-                                    <li>
-                                        <div class="">Vòng Bán Kết: 8/7 - 15/7 tại Cần Thơ</div>
-                                    </li>
-                                    <li>
-                                        <div class="">Gala Chung kết: 22/7 tại Cần Thơ</div>
-                                    </li>
+                                    <li>Vòng Audition: 17/4- 30/5</li>
+                                    <li>Vòng bình chọn Online 5/6 - 30/6</li>
+                                    <li>Vòng Bán Kết: 8/7 - 15/7 tại Cần Thơ</li>
+                                    <li>Gala Chung kết: 22/7 tại Cần Thơ</li>
                                 </ul>
                             </li>
                             <li>
@@ -126,16 +121,12 @@
                             <ul>
                                 <li>TOP 4 - 2,000,000VND</li>
                                 <li>TOP 8 - 1,000,000VND</li>
-                                <li>
-                                    <div class="">TOP 16</div>
-                                    <ul>
-                                        <li>500,000VND</li>
-                                        <li>Hỗ trợ tìm trường và săn học bổng toàn phần tại các trường đại học hàng đầu tại Úc.</li>
-                                        <li>Một năm sử dụng dịch vụ miễn phí từ nhà tài trợ (SWCG).</li>
-                                        <li>Kỷ niệm chương và giấy chứng nhận từ Ban tổ chức.</li>
-                                    </ul>
-                                </li>
-                                <li>Các giải học bổng tiền mặc khác do các mạnh thường quân của chương trình tài trợ.</li>
+                                <li>TOP 16 - 500,000VND </li>
+                                <li class="no-dot"><br /></li>
+                                <li class="no-dot">Hỗ trợ tìm trường và săn học bổng toàn phần tại các trường đại học hàng đầu tại Úc.</li>
+                                <li class="no-dot">Một năm sử dụng dịch vụ miễn phí từ nhà tài trợ (SWCG).</li>
+                                <li class="no-dot">Kỷ niệm chương và giấy chứng nhận từ Ban tổ chức.</li>
+                                <li class="no-dot">Các giải học bổng tiền mặc khác do các mạnh thường quân của chương trình tài trợ.</li>
                             </ul>
                         </div>
                     </div>
