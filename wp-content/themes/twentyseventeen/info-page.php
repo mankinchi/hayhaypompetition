@@ -80,7 +80,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/info-rules.jpg" alt="rules"/>
                 </div>
                 <div class="col-md-6 col-md-offset-3">
-    				<a href="http://bit.ly/1dNVPAW" target="_blank"><button type="button" class="btn info-more">THỂ LỆ CUỘC THI CHI TIẾT</button></a>
+    				<a href="http://bit.ly/ThelethichitietBAY2017" target="_blank"><button type="button" class="btn info-more">THỂ LỆ CUỘC THI CHI TIẾT</button></a>
     			</div>
             </div>
         </div>
