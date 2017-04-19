@@ -49,7 +49,7 @@
                             <li>
                                 <div class="">Khán giả:</div>
                                 <ul>
-                                    <li>Bình chọn thí sinh được yêu thích nhất vào thẳng vòng Gala Chung kết: 6/6- 26-6</li>
+                                    <li>Bình chọn thí sinh được yêu thích nhất vào thẳng vòng Gala Chung kết: 6/6 - 26/6</li>
                                 </ul>
                             </li>
                         </ul>
