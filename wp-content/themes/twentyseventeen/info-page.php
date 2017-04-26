@@ -148,7 +148,7 @@
         </div>
         <div class="row">
             <div class="registerBtn col-md-4 col-md-offset-4">
-                <a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
+                <a href="http://bit.ly/BAYinfobooklet" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
             </div>
         </div>
     </div>
