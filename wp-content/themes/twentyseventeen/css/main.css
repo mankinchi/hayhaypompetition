@@ -211,22 +211,17 @@
     background-color: #E8E8EA;
 }
 
-.news-modal .image-container {
-    padding-left: 15px;
+.news-modal .main-news-container img{
+    width: 100%;
 }
 
 .news-modal .news-title {
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 15px;
-    padding-bottom: 5px;
-    padding-left: 0;
-    border-bottom: solid;
-    border-bottom-width: thin;
-    border-bottom-color: rgba(128,128,128,0.42);
     font-size: 20px;
     font-weight: bold;
-    color: #EF4623;
+    color: black;
+    font-family: 'RobotoSlabb';
 }
 
 .news-modal .more {
@@ -245,30 +240,26 @@
 
 .news-modal .sub-news-container {
     cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    height: 700px;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
-.news-modal .sub-news-container .row {
-    margin-left: 15px;
-    margin-right: 0;
-}
-
 .news-modal .sub-news {
-    padding: 15px;
-    font-size: 16px;
-    border-top: solid thin grey;
-    border-bottom: solid thin grey;
+    border-bottom: solid thin;
+    margin-bottom: 20px;
 }
 
-.news-modal .sub-news.selected {
-    background-color: #EF4623;
-    color: white;
-    border-color: white;
+.news-modal .sub-news img {
+    width: 100%;
 }
+
+.news-modal .sub-news .summary .title {
+    text-align: left;
+    font-size: 1.3vw;
+    margin: 10px 0;
+}
+
 
 /* VIDEO MODAL - for front page */
 .sub-video .video {
@@ -329,4 +320,40 @@
 
 .register-modal .text-container a {
     color: white;
+}
+
+
+/* SPONSOR MODAL - for front page */
+.sponsor-modal .bio {
+    border-bottom: solid thin;
+    padding: 10px 0;
+}
+
+.sponsor-modal .name {
+    font-size: 30px;
+    font-family: 'Robotob';
+}
+
+.sponsor-modal .position {
+    font-size: 15px;
+    font-size: 'Robotot';
+}
+
+.sponsor-modal .quote {
+    padding-top: 10px;
+    font-size: 15px;
+    font-size: 'Robotot';
+}
+
+.sponsor-modal .logo-box-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.sponsor-modal .company-logo {
+    height: 100%;
+    padding: 0 10px;
 }

@@ -547,12 +547,18 @@ function bootstrapjquery() {
 			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 			wp_enqueue_style('main-mobile', get_template_directory_uri() . '/css/main-mobile.css');
 			break;
-		case 'single-contestants.php':
-			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');
-			break;
 		case 'info-page.php':
 			wp_enqueue_style('info-page', get_template_directory_uri() . '/css/info-page.css');
 			wp_enqueue_style('info-page-mobile', get_template_directory_uri() . '/css/info-page-mobile.css');
+			break;
+		case 'news-page.php':
+			wp_enqueue_style('info-page', get_template_directory_uri() . '/css/news-page.css');
+			break;
+		case 'single-contestants.php':
+			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');
+			break;
+		case 'single-news.php':
+			wp_enqueue_style('news-page', get_template_directory_uri() . '/css/single-new.css');
 			break;
 		default:
 			# code...

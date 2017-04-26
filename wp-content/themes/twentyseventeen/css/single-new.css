@@ -1,0 +1,56 @@
+.new-container {
+    margin-top: 60px;
+}
+
+.title {
+    font-size: 2vw;
+    padding-bottom: 10px;
+    font-family: 'RobotoSlabb';
+    color: black;
+}
+
+.body {
+    border-top: solid thin;
+    border-bottom: solid thin;
+    padding: 30px 0;
+    font-family: 'Robotol';
+    color: black;
+}
+
+.body b, .body strong {
+    font-family: 'Robotob';
+}
+
+.content {
+    font-size: 1.1vw;
+}
+
+.content img {
+    display: block;
+    margin: 0 auto;
+}
+
+.author {
+    text-align: right;
+    font-size: 1.1vw;
+    font-family: 'Robotob';
+}
+
+/* Related news */
+.related-news .new {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.related-news .image {
+    min-height: 250px;
+}
+
+.related-news img {
+    width: 100%;
+}
+
+.related-news .title {
+    font-size: 1.4vw;
+    border-bottom: solid thin;
+}

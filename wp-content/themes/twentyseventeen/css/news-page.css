@@ -1,0 +1,59 @@
+.news-modal {
+    padding: 50px 0 100px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 50px;
+    font-family: 'RobotoSlabb';
+}
+
+.main-news-container img{
+    width: 100%;
+}
+
+.news-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    font-family: 'RobotoSlabb';
+}
+
+.main-news-container .more {
+    margin-top: 20px;
+}
+
+.main-news-container .more a{
+    color: #EF4623;
+    font-size: 20px;
+}
+
+.main-news-container .more a::after{
+    font-family: FontAwesome;
+    content: "\f063";
+}
+
+.sub-news-container {
+    cursor: pointer;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sub-news {
+    border-bottom: solid thin;
+    margin-bottom: 20px;
+}
+
+.sub-news img {
+    width: 100%;
+}
+
+.sub-news .summary .title {
+    text-align: left;
+    font-size: 1.3vw;
+    margin: 10px 0;
+}

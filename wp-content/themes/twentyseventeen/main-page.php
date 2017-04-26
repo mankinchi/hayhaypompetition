@@ -23,6 +23,7 @@
     get_template_part('template-parts/main-page/news','modal');
     get_template_part('template-parts/main-page/videos','modal');
     get_template_part('template-parts/main-page/register','modal');
+    get_template_part('template-parts/main-page/sponsor','modal');
     get_template_part('template-parts/global/footer');
 ?>
     <script type="text/javascript">
