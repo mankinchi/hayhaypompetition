@@ -1,0 +1,1 @@
+/Volumes/Data/Desktop/learning/sw/bay/wp-content/plugins/query-monitor/wp-content/db.php

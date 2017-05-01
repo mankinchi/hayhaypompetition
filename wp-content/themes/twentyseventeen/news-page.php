@@ -15,4 +15,5 @@
 <?php
     get_template_part('./template-parts/main-page/news','modal');
     get_template_part('./template-parts/global/footer');
+    get_footer();
  ?>
