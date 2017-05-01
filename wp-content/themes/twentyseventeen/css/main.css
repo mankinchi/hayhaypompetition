@@ -125,36 +125,8 @@
     width: 30%;
 }
 
-.bottom-header .more-container {
-    padding: 0% 5%;
-}
-
-.bottom-header .more {
-    font-family: 'Robotol';
-    /*font-weight: 300;*/
-    font-size: 2vh;
-    background-color: #EF4623;
-    border-radius: 25px;
-    margin-top: 20px;
-    color: white;
-}
-
 .bottom-header a:hover {
     text-decoration: none;
-}
-
-/* All page modal - of front page */
-.page-modal {
-    padding-top: 12vh;
-    padding-bottom: 8vh;
-}
-
-.page-modal .title {
-    margin-bottom: 3%;
-    text-align: center;
-    font-size: 5.6vh;
-    font-family: 'RobotoSlabb';
-    /*font-weight: 700;*/
 }
 
 /* CONTESTANT PART - of front page*/
@@ -206,65 +178,11 @@
     background-color: #EF4623
 }
 
-/* NEWS PART - of front page */
-.news-modal {
-    background-color: #E8E8EA;
-}
-
-.news-modal .main-news-container img{
-    width: 100%;
-}
-
-.news-modal .news-title {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    font-family: 'RobotoSlabb';
-}
-
-.news-modal .more {
-    margin-top: 20px;
-}
-
-.news-modal .more a{
-    color: #EF4623;
-    font-size: 20px;
-}
-
-.news-modal .more a::after{
-    font-family: FontAwesome;
-    content: "\f063";
-}
-
-.news-modal .sub-news-container {
-    cursor: pointer;
-    height: 700px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.news-modal .sub-news {
-    border-bottom: solid thin;
-    margin-bottom: 20px;
-}
-
-.news-modal .sub-news img {
-    width: 100%;
-}
-
-.news-modal .sub-news .summary .title {
-    text-align: left;
-    font-size: 1.3vw;
-    margin: 10px 0;
-}
-
-
 /* VIDEO MODAL - for front page */
 .sub-video .video {
     height: 200px;
     background-color: black;
+    border: solid thin rgba(0,0,0,0.14);
 }
 
 .videos-modal .sub-video i {
@@ -275,16 +193,20 @@
 
 .videos-modal .video-text {
     text-align: center;
-    font-size: 15px;
+    font-size: 1.2vw;
     margin-top: 10px;
 }
 
 .videos-modal .video-title {
-    font-weight: lighter;
+    font-family: 'Robotot';
 }
 
 .videos-modal .video-author {
     font-weight: bold;
+}
+
+.videos-modal .sub-video .video-text {
+    font-size: 1vw;
 }
 
 /* REGISTER MODAL - for front page */
@@ -326,23 +248,27 @@
 /* SPONSOR MODAL - for front page */
 .sponsor-modal .bio {
     border-bottom: solid thin;
-    padding: 10px 0;
+    padding-bottom: 10px;
 }
 
 .sponsor-modal .name {
-    font-size: 30px;
+    font-size: 2.05vw;
+    line-height: 0.73em;
+    color: black;
     font-family: 'Robotob';
 }
 
 .sponsor-modal .position {
-    font-size: 15px;
-    font-size: 'Robotot';
+    font-size: 1.3vw;
+    color: #8a8a8a;
+    font-family: 'Robotol';
+    margin-top: 5px;
 }
 
 .sponsor-modal .quote {
     padding-top: 10px;
-    font-size: 15px;
-    font-size: 'Robotot';
+    font-size: 1.3vw;
+    font-family: 'Robotot';
 }
 
 .sponsor-modal .logo-box-container {
@@ -350,10 +276,9 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 .sponsor-modal .company-logo {
     height: 100%;
-    padding: 0 10px;
 }

@@ -1,8 +1,4 @@
 @media (max-width:992px) {
-    iframe, .video {
-        height: 50vh !important;
-    }
-
     .bottom-header {
         min-height: 100%;
         height: auto;
@@ -58,5 +54,25 @@
     .top-header-mobile .fourth {
         font-family: 'Intro';
         font-size: 6vw;
+    }
+
+    .videos-modal .video-text {
+        font-size: 3vw;
+    }
+
+    .sponsor-modal .name {
+        font-size: 6vw
+    }
+
+    .sponsor-modal .position {
+        font-size: 3vw
+    }
+
+    .sponsor-modal .quote {
+        font-size: 3vw;
+    }
+
+    .sponsor-modal .logo-box-container {
+        height: 20px;
     }
 }

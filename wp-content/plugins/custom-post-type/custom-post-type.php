@@ -1,6 +1,6 @@
 <?php
     // Plugin name: Custom Post Type
-    // Description: Create contestant post type
+    // Description: Create custom post type for: Contestant, News
     // Version: 1.0
     // Creator: Tri Nguyen
 
@@ -25,46 +25,47 @@
 
     add_action('init','my_contestant_post_type');
 
-    function save_data_to_database($post_id) {
-        $id = get_field('id');
-        $name = get_the_title($post_id);
-        $age = get_field('age');
-        $school = get_field('school');
-        $class = get_field('class');
-        $imageLink = get_field('imageLink');
-        $youtubeLink = get_field('youtubeLink');
-        $description = get_field('description');
-        $vote = get_field('vote');
-        global $wpdb;
-        if ($wpdb->get_row("SELECT * FROM wp_contestants WHERE contestant_id = '$id'") !== null) {
-            $details = array(
-                'contestant_id' => $id,
-                'contestant_name' => $name,
-                'contestant_age' => $age,
-                'contestant_school' => $school,
-                'contestant_class' => $class,
-                'contestant_youtubeLink' => $youtubeLink,
-                'contestant_imageLink' => $imageLink,
-                'contestant_description' => $description,
-            );
-            $wpdb->update('wp_contestants', $details, array(
-                'contestant_id' => $id
-            ));
-        } else {
-            $details = array(
-                'contestant_id' => $id,
-                'contestant_name' => $name,
-                'contestant_age' => $age,
-                'contestant_school' => $school,
-                'contestant_class' => $class,
-                'contestant_youtubeLink' => $youtubeLink,
-                'contestant_imageLink' => $imageLink,
-                'contestant_description' => $description,
-                'contestant_vote' => $vote
-            );
-            $wpdb->insert('wp_contestants', $details);
-        }
-    };
+    function news_post_type() {
+        $labels = array(
+    		'name'               => 'News',
+    		'singular_name'      => 'new',
+    		'menu_name'          => 'News',
+    		'name_admin_bar'     => 'New',
+    	);
 
-    add_action('acf/save_post','save_data_to_database', 20);
+    	$args = array(
+    		'public'                  => true,
+            'show_ui'                 => true,
+            'show_in_admin_bar'       => true,
+            'menu_icon'               => 'dashicons-format-aside',
+    		'labels'                  => $labels,
+            'supports'                => array('title','editor','thumbnail')
+    	);
+    	register_post_type('news', $args );
+        // flush_rewrite_rules();
+    }
+
+    add_action('init','news_post_type');
+
+    function video_post_type() {
+        $labels = array(
+    		'name'               => 'Videos',
+    		'singular_name'      => 'video',
+    		'menu_name'          => 'Videos',
+    		'name_admin_bar'     => 'Video',
+    	);
+
+    	$args = array(
+    		'public'                  => true,
+            'show_ui'                 => true,
+            'show_in_admin_bar'       => true,
+            'menu_icon'               => 'dashicons-format-video',
+    		'labels'                  => $labels,
+            'supports'                => array('title')
+    	);
+    	register_post_type('videos', $args );
+        flush_rewrite_rules();
+    }
+
+    add_action('init','video_post_type');
  ?>

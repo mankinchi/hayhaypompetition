@@ -14,10 +14,9 @@
                 <div class="second hidden-xs hidden-sm">Ban tổ chức tin rằng <strong>BAY Competition</strong> sẽ là nơi truyền cảm hứng, chắp cánh cho sinh viên nói lên ước mơ và hoài bão của mình, giúp thế hệ trẻ Việt Nam phát triển tư duy, thái độ sống tích cực để các bạn có đủ hành trang bước ra hòa nhập với thế giới, trở thành công dân toàn cầu.</div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 more-container">
-                <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')); ?>"><button type="button" class="btn btn-block more">CHI TIẾT CUỘC THI</button></a>
-            </div>
-        </div>
+        <?php
+			$page = 'gioi-thieu';
+			include(locate_template('template-parts/global/docthem-button.php'));
+		 ?>
     </div>
 </div>

@@ -11,7 +11,6 @@
 ?>
 <?php
 	// TODO: Switch navigation bar to page link
-	// TODO: Set another new menu in wordpress backend
 	// TODO: Check if user has already login (using sessionStorage)
  ?>
  <div class="col-md-offset-2 col-md-1 col-xs-3 head-logo-container">

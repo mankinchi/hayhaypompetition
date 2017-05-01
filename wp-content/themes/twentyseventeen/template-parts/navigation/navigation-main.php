@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 menu-top-container">
         			<div class="row">
-<div class="col-md-2 hidden-xs hidden-sm"></div>
+                        <div class="col-md-2 hidden-xs hidden-sm"></div>
         				<?php
         					for ($i=0; $i <= 3; $i++) {
         						echo "<div class='col-md-2 logo-item'>" . $menu_array[$i] . "</div>";

@@ -16,9 +16,9 @@
         ?>
         <div class="row">
             <div class="col-md-12">
-                <div class="title"><?php the_title() ?></div>
+                <div class="news-title"><?php the_title() ?></div>
                 <div class="body">
-                    <div class="content"><?php the_content()  ?></div>
+                    <div class="text"><?php the_content()  ?></div>
                     <div class="author"><?php echo $fields["author"] ?></div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             endwhile;endif;
         ?>
         <div class="row">
-            <div class="col-md-12 related-news">
+            <div class="col-md-12 hidden-xs hidden-sm related-news">
                 <?php
                     $posts = get_posts(array(
                         'post_type' => 'news'
@@ -46,20 +46,22 @@
                         $post = $posts[$index];
                         setup_postdata($post);
                         ?>
-                        <a href="<?php echo get_permalink() ?>">
-                            <div class="row new">
-                                <div class="col-md-6 image"><img src="<?php echo get_the_post_thumbnail_url() ?>" alt=""></div>
-                                <div class="col-md-6 summary">
-                                    <div class="title"><?php the_title() ?></div>
-                                    <div class="content"></div>
-                                </div>
+                        <div class="row new">
+                            <div class="col-md-6">
+                                <div class="image-box"><a href="<?php echo get_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" alt=""></a></div></div>
+                            <div class="col-md-6 summary">
+                                <a href="<?php echo get_permalink() ?>"><div class="news-title"><?php the_title() ?></div></a>
+                                <div class="content"></div>
                             </div>
-                        </a>
+                        </div>
                         <?php
                         wp_reset_postdata();
                     }
                  ?>
             </div>
+            <?php
+				get_template_part("template-parts/global/news","carousel");
+			 ?>
         </div>
     </div>
     <div class="col-md-2 hidden-sm hidden-xs">

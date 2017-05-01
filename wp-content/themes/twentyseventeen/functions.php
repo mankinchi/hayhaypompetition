@@ -559,6 +559,7 @@ function bootstrapjquery() {
 			break;
 		case 'single-news.php':
 			wp_enqueue_style('news-page', get_template_directory_uri() . '/css/single-new.css');
+			wp_enqueue_style('news-page-mobile', get_template_directory_uri() . '/css/single-new-mobile.css');
 			break;
 		default:
 			# code...

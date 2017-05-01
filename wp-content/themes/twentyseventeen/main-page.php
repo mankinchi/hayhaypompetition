@@ -27,20 +27,12 @@
     get_template_part('template-parts/global/footer');
 ?>
     <script type="text/javascript">
-        var videoPlayed = false;
         $("body").animate({
             'opacity' : 1
         }, 2000);
         var position = 0;
 
         $(window).on('wheel', function(event) {
-            console.log(position);
-            if (!videoPlayed) {
-                if ($(window).scrollTop() + $(window).innerHeight() >= $(".video").offset().top) {
-                    $(".video").trigger('click');
-                    videoPlayed = true;
-                }
-            }
             // Window scroll
             if (event.originalEvent.deltaY < 0) {
                 // Scroll up

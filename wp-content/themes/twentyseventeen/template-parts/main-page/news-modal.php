@@ -11,24 +11,22 @@
 <div class="row news-modal page-modal" position="2">
 	<div class="col-md-12">
 		<div class="row">
-			<div class="col-md-12 title">
-				<div class="title-text">Tin tức</div>
+			<div class="col-md-12 modal-header">
+				<div class="page-modal-title">Tin tức</div>
 				<div class="underline"></div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-2 hidden-xs hidden-sm">
 			    <div class="row">
 			        <div class="col-md-8 main-news-container">
 			            <div class="row">
 	                        <div class="col-md-12">
-	                            <img alt="">
+	                            <a href="#"><img alt=""></a>
 	                        </div>
-	                        <div class="col-md-12 news-title"></div>
-	                        <div class="col-md-12 short-description"></div>
-	                        <div class="col-md-12 more">
-	                            <a href="#">Read more </a>
-	                        </div>
+	                        <a href=""><div class="col-md-12"><span class="news-title"></span></div></a>
+	                        <a href=""><div class="col-md-12"><span class="short-description"></span></div></a>
+	                        <a href="#"><div class="col-md-12 read-more">Read more <i class="fa fa-plus"></i></div></a>
 			            </div>
 			        </div>
 			        <div class="col-md-4 hidden-xs hidden-sm sub-news-container">
@@ -64,7 +62,14 @@
 			        </div>
 			    </div>
 			</div>
+			<?php
+				get_template_part("template-parts/global/news","carousel");
+			 ?>
 		</div>
+		<?php
+			$page = 'tin-tuc';
+			include(locate_template('template-parts/global/docthem-button.php'));
+		 ?>
 	</div>
 </div>
 <script type="text/javascript">
