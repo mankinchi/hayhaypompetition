@@ -41,6 +41,9 @@
                         if (!in_array($index, $display_index)) {
                             $display_index[] = $index;
                         }
+                        if (count($display_index) == count($posts) - 1) {
+                            break;
+                        }
                     };
                     foreach ($display_index as $index) {
                         $post = $posts[$index];
