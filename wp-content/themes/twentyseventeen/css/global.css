@@ -193,6 +193,12 @@ a:focus {
     font-size: 1.5vw;
 }
 
+.news-modal .short-description {
+    font-size: 1vw;
+    font-family: 'Robotol';
+    color: black;
+}
+
 .news-modal .read-more {
     margin-top: 20px;
     color: #EF4623;

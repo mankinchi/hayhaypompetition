@@ -47,7 +47,7 @@
 													</div>
 													<div class="col-md-12 summary">
 														<div class="news-title"><?php echo the_title() ?></div>
-														<div class="content hide"><?php echo the_content() ?></div>
+														<div class="content hide"><?php echo get_field('summary') ?></div>
 														<div class="link hide"><?php echo the_permalink() ?></div>
 													</div>
 												</div>
@@ -83,11 +83,11 @@
 				var src = $(toDisplayNew).find('.thumbnail-photo img').attr('src');
 				var title = $(toDisplayNew).find('.news-title').text();
 				var link = $(toDisplayNew).find('.link').text();
-				// var content = $(toDisplayNew).find('.content').text();
+				var content = $(toDisplayNew).find('.content').text();
 				$(".main-news-container img").attr('src', src);
 				$(".main-news-container .news-title").text(title);
 				$(".main-news-container a").attr('href', link);
-				// $(".main-news-container .short-description").text(content);
+				$(".main-news-container .short-description").text(content);
 				$(".main-news-container").fadeIn('slow');
 			});
 		}

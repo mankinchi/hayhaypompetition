@@ -22,10 +22,10 @@
     font-size: 1.1vw;
 }
 
-.body .text img {
+.body .text img{
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
 }
 
