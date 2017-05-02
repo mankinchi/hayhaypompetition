@@ -122,9 +122,8 @@
 		var index = $(".menu-top-container a").index($(this));
         if (index != position) {
             hideMenu();
-            if (index != 5) {
-                // index = 5 -> Dang Ky
-    			var index = $(".menu-top-container a").index($(this));
+            if ($(this).attr('src') == "#") {
+                // Moving in page
     			if (index == 0 && position != 0) {
     				$('html, body').animate({
     					scrollTop : 0
