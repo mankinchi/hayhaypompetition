@@ -80,7 +80,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/info-rules.jpg" alt="rules"/>
                 </div>
                 <div class="col-md-6 col-md-offset-3">
-    				<a href="http://bit.ly/ThelethichitietBAY2017" target="_blank"><button type="button" class="btn info-more">THỂ LỆ CUỘC THI CHI TIẾT</button></a>
+    				<a href="http://bit.ly/BAYinfobooklet" target="_blank"><button type="button" class="btn info-more">THỂ LỆ CUỘC THI CHI TIẾT</button></a>
     			</div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                                 <li>1 năm học tiếng Anh miễn phí tại trung tâm ngoại ngữ tại Cần Thơ</li>
                                 <li>2 năm sử dụng dịch vụ miễn phí tại SWCG trị giá 50.000.000 VNĐ</li>
                                 <li>Nhóm tuổi 14-17: Cơ hội học bổng của trường Ozford (tương đương 70.000.000 VNĐ)</li>
-                                <li>Nhóm tuổi 18-23: Cơ hội học bổng 25% của Đại học Swinburne</li>
+                                <li>Nhóm tuổi 18-23: Cơ hội học bổng 25% của Đại học Tasmania</li>
                             </ul>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
         </div>
         <div class="row">
             <div class="registerBtn col-md-4 col-md-offset-4">
-                <a href="http://bit.ly/BAYinfobooklet" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
+                <a href="http://bit.ly/registerbaycompetition2017" target="_blank"><button type="button" class="btn">ĐĂNG KÝ</button></a>
             </div>
         </div>
     </div>
