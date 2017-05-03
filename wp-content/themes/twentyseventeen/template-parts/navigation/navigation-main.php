@@ -70,11 +70,10 @@
     }
 
 	$(".menu-top-container a").eq(<?php echo $id ?>).addClass('active');
-	function switchMenuOption(newPos) {
-		if ($(".menu-top-container a").eq(newPos).hasClass('active') == false) {
-			$(".menu-top-container a.active").removeClass('active');
-			$(".menu-top-container a").eq(newPos).addClass('active');
-		}
+	function switchMenuOption() {
+		$(".menu-top-container a.active").removeClass('active');
+        var pos = positionNameArray.indexOf(positionName);
+		$(".menu-top-container a").eq(pos).addClass('active');
 	};
 
 	function getDetails() {
@@ -118,37 +117,81 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 
+    function navCheckScrolling(direction) {
+        switch (direction) {
+            case "up":
+                var currentPos = positionNameArray.indexOf(positionName);
+                if (currentPos > 1) {
+                    var checkedPos = positionNameArray[currentPos - 1];
+                    var checkedEl = $("div[positionName='" + checkedPos + "']");
+
+                    var limit = checkedEl.offset().top + checkedEl.innerHeight()/2;
+                    var windowPos = $(window).scrollTop();
+                    if (windowPos <= limit) {
+                        positionName = checkedPos;
+                        switchMenuOption();
+                    }
+                };
+                break;
+            case "down":
+                var currentPos = positionNameArray.indexOf(positionName);
+                if (positionName == "#trang-chu") {
+                    animateSmallNav();
+                    positionName = positionNameArray[currentPos + 1];
+                } else {
+                    if (currentPos <= positionNameArray.length - 2) {
+                        var checkedPos = positionNameArray[currentPos + 1];
+                        var checkedEl = $("div[positionName='" + checkedPos + "']");
+                        var limit = checkedEl.offset().top + checkedEl.innerHeight()/2;
+                        var windowPos = $(window).scrollTop() + $(window).innerHeight();
+                        if (windowPos >= limit) {
+                            positionName = checkedPos;
+                        }
+                    };
+                }
+                switchMenuOption();
+                break;
+            default:
+                break;
+        }
+    }
+
+    var positionName = "#trang-chu";
+    var positionNameArray = new Array();
+    $(".menu-top-container a").each(function(index, el) {
+        var location = $(el).attr('href');
+        if (location[0] == "#") {
+            positionNameArray.push($(el).attr('href'));
+        }
+    });
+
 	$(".menu-top-container a").click(function(event) {
-		var index = $(".menu-top-container a").index($(this));
-        if (index != position) {
+		var location = $(this).attr('href');
+        if (location != positionName) {
             hideMenu();
-            if ($(this).attr('src') == "#") {
-                // Moving in page
-    			if (index == 0 && position != 0) {
-    				$('html, body').animate({
+            if (location[0] != "#") {
+                // Nut Dang ky => link bitly
+                return true;
+            } else {
+                if (location == "#trang-chu" && positionName != "#trang-chu") {
+                    $('html, body').animate({
     					scrollTop : 0
     				}, 400).promise().then(function() {
     					showOverlay();
     				});
-    			} else if (index != 4) {
-                    // index = 4 -> Dang Nhap
-    				if (position == 0 && index != 0) {
-    					hideOverlay();
-    				}
-    				position = index;
-    				switchMenuOption(position);
-    				var element = $("div[position='"+ index +"']");
+                } else {
+                    if (location != "#trang-chu" && positionName == "#trang-chu") {
+                        hideOverlay();
+                    };
+    				var element = $("div[positionName='"+ location +"']");
     				$('html, body').animate({
     					scrollTop : $(element).offset().top
     				}, 400);
-    			} else {
-                    // index = 4 -> Dang Nhap
-    				return false;
-    			}
-    			return false;
-    		} else {
-    			return true;
-    		}
+                }
+                positionName = location;
+                switchMenuOption();
+                return false;
+            }
         } else {
             return false;
         }

@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?>
-<div class="row contestant-modal page-modal" position="2">
+<div class="row contestant-modal page-modal">
 	<div class="row">
 		<div class="col-md-12 title">
 			<div class="title-text">Top 16</div>

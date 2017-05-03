@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?>
-<div class="row videos-modal page-modal" position="3">
+<div class="row videos-modal page-modal" positionName="#video">
     <div class="col-md-12 hidden-xs hidden-sm">
         <div class="row">
     		<div class="col-md-12 modal-header">

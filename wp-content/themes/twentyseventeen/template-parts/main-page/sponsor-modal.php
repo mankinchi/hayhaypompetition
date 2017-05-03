@@ -8,7 +8,7 @@
  * @version 1.0
  */
 ?>
-<div class="row sponsor-modal page-modal" position="4">
+<div class="row sponsor-modal page-modal">
     <div class="col-md-12">
         <div class="row">
     		<div class="col-md-12 modal-header">

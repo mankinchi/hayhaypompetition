@@ -30,7 +30,6 @@
         $("body").animate({
             'opacity' : 1
         }, 2000);
-        var position = 0;
 
         $(window).on('wheel', function(event) {
             // Window scroll
@@ -43,34 +42,15 @@
                         event.preventDefault();
                         showOverlay();
                     }
-                } else {
-                    if (position >= 1) {
-                        var checkedPos = position - 1;
-                        var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
-                        var windowPos = $(window).scrollTop();
-                        if (windowPos <= limit) {
-                            position = checkedPos;
-                            switchMenuOption(checkedPos);
-                        }
-                    };
                 }
+                navCheckScrolling("up");
             } else {
                 // Scroll down
                 if ($(".top-header").css('opacity') > 0.5 && $(".moreNav").innerHeight() == 0) {
+                    // When overlay appears and not on mobile
                     event.preventDefault();
                 } else {
-                    if (position == 0) {
-                        animateSmallNav();
-                    }
-                    if (position <= 2) {
-                        var checkedPos = position + 1;
-                        var limit = $("div[position='"+ checkedPos +"']").offset().top + ($("div[position='"+ checkedPos +"']").innerHeight())/2;
-                        var windowPos = $(window).scrollTop() + $(window).innerHeight();
-                        if (windowPos >= limit) {
-                            position = checkedPos;
-                            switchMenuOption(checkedPos);
-                        }
-                    };
+                    navCheckScrolling("down");
                 }
             }
         });
