@@ -26,7 +26,7 @@ a:focus {
 
 /* All page modal - of front page */
 .page-modal {
-    padding: 6vh 0;
+    padding: 3.1vw 0;
 }
 
 .page-modal .modal-header {
@@ -36,7 +36,7 @@ a:focus {
 
 .page-modal .page-modal-title {
     text-align: center;
-    font-size: 5.6vh;
+    font-size: 2.9vw;
     font-family: 'RobotoSlabb';
 }
 
@@ -112,7 +112,7 @@ a:focus {
 
 .modal-more button {
     font-family: 'Robotol';
-    font-size: 2vh;
+    font-size: 1vw;
     background-color: #EF4623;
     border-radius: 25px;
     margin-top: 20px;
@@ -167,7 +167,7 @@ a:focus {
 }
 
 .play-button i {
-    font-size: 4vh;
+    font-size: 2vw;
     padding: 2% 4%;
     border-radius: 20px;
     color: white;

@@ -1,13 +1,4 @@
 @media (max-width:992px) {
-    .bottom-header {
-        min-height: 100%;
-        height: auto;
-    }
-
-    .bottom-header .text {
-        transform: none;
-    }
-
     .top-header-mobile-container {
         height: 100%;
     }
@@ -34,14 +25,14 @@
 
     .top-header-mobile .first {
         font-family: 'IntroThin';
-        font-size: 6.5vh;
+        font-size: 11.4vw;
         margin-bottom: -10px;
     }
 
     .top-header-mobile .second {
         margin-top: 10px;
         font-family: 'Intro';
-        font-size: 7.5vh;
+        font-size: 13.3vw;
         line-height: 1;
     }
 
@@ -56,10 +47,32 @@
         font-size: 6vw;
     }
 
-    #news-carousel .news-title {
-        line-height: 1.3;
-        height: 11.7vw;
-        border: none;
+    .register-modal .text-container {
+        font-size: 8vw;
+    }
+
+    .register-modal .text-container button {
+        font-size: 4vw;
+    }
+    .bottom-header {
+        min-height: 100%;
+        height: auto;
+    }
+
+    .bottom-header .text {
+        transform: none;
+    }
+
+    .bottom-header .first {
+        font-size: 10vw;
+    }
+
+    .bottom-header .second {
+        font-size: 4vw
+    }
+
+    .modal-more button {
+        font-size: 4vw;
     }
 
     .videos-modal .video-text {

@@ -75,7 +75,7 @@
 }
 
 .top-header .more p {
-    font-size: 2.5vh;
+    font-size: 1.25vw;
     color: white;
     margin-bottom: -10px;
     font-family: 'Robotol';
@@ -105,15 +105,13 @@
 
 .bottom-header .first {
     font-family: 'RobotoSlabb';
-    /*font-weight: 700;*/
-    font-size: 6vh;
+    font-size: 3.1vw;
 }
 
 .bottom-header .second {
     font-family: 'Robotol';
-    /*font-weight: 300;*/
     margin-top: 30px;
-    font-size: 2.1vh;
+    font-size: 1.1vw;
     line-height: 1.8;
 }
 
@@ -138,7 +136,7 @@
 
 .contestant-name {
     font-family: 'RobotoSlabr';
-    font-size: 2vh;
+    font-size: 1.05vw;
     padding: 0;
 }
 
@@ -186,7 +184,7 @@
 }
 
 .videos-modal .sub-video i {
-    font-size: 2vh;
+    font-size: 1.05vw;
     padding: 2% 5%;
     border-radius: 7px;
 }
@@ -223,7 +221,7 @@
     transform: translateY(-50%);
     text-align: center;
     color: white;
-    font-size: 4.4vh;
+    font-size: 2.25vw;
 }
 
 .register-modal .text-container p {
@@ -234,7 +232,7 @@
 .register-modal .text-container button {
     font-family: 'Robotol';
     /*font-weight: 300;*/
-    font-size: 2vh;
+    font-size: 1.05vw;
     background-color: #EF4623;
     border-radius: 25px;
     padding: 1% 10%;

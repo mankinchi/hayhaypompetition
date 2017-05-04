@@ -14,4 +14,24 @@
         font-family: 'Intro';
         font-size: 10vw;
     }
+
+    .part .title .text {
+        font-size: 5vw;
+    }
+
+    .part {
+        font-size: 3vw;
+    }
+
+    .registerBtn button {
+        font-size: 3vw;
+    }
+
+    .part .info-more {
+        font-size: 3vw;
+    }
+
+    .sub-part .heading {
+        font-size: 4vw;
+    }
 }
