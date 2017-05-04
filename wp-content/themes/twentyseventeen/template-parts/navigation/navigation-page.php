@@ -52,6 +52,12 @@
  <?php } ?>
  </div>
 <script>
+    var mobile;
+    if ($(".moreNav").innerHeight() != 0) {
+        mobile = true;
+    } else {
+        mobile = false;
+    }
     // XS menu
     if (mobile) {
         $(".menu-top-container").hide();
