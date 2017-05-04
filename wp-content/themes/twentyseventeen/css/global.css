@@ -160,10 +160,10 @@ a:focus {
 }
 
 .play-button {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .play-button i {

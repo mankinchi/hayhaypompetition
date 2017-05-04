@@ -26,7 +26,7 @@
 	                        </div>
 	                        <a href=""><div class="col-md-12"><span class="news-title"></span></div></a>
 	                        <a href=""><div class="col-md-12"><span class="short-description"></span></div></a>
-	                        <a href="#"><div class="col-md-12 read-more">Read more <i class="fa fa-plus"></i></div></a>
+	                        <a href="#"><div class="col-md-12 read-more">Chi tiết <i class="fa fa-plus"></i></div></a>
 			            </div>
 			        </div>
 			        <div class="col-md-4 hidden-xs hidden-sm sub-news-container">

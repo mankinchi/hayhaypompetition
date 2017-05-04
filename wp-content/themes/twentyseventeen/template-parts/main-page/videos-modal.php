@@ -9,7 +9,7 @@
  */
 ?>
 <div class="row videos-modal page-modal" positionName="#video">
-    <div class="col-md-12 hidden-xs hidden-sm">
+    <div class="col-md-12">
         <div class="row">
     		<div class="col-md-12 modal-header">
     			<div class="page-modal-title">Video</div>
@@ -17,7 +17,7 @@
     		</div>
     	</div>
     	<div class="row">
-    		<div class="col-md-offset-2 col-md-8">
+    		<div class="col-md-offset-2 col-md-8 hidden-xs hidden-sm">
                 <div class="row">
                     <div class="col-md-12 main-video">
                         <div class="row">
@@ -58,50 +58,50 @@
                      ?>
                 </div>
     		</div>
-    	</div>
-    </div>
-    <div class="col-xs-12 visible-xs-block visible-sm-block">
-        <div id="video-carousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <?php
-                    $posts = get_posts(array(
-                        'post_type' => 'videos'
-                    ));
-                    $i = 0;
-                    foreach ($posts as $post) {
-                        setup_postdata($post);
-                        if ($i == 0) {
-                            $class = "item active";
-                        } else {
-                            $class = "item ";
-                        }
-                        ?>
-                        <div class="<?php echo $class ?>">
-                            <div class="video-container">
-                                <div class="video" link="<?php echo get_field('link') ?>">
-                                    <div class="play-button">
-                                        <i class="fa fa-play"></i>
+            <div class="col-xs-12 visible-xs-block visible-sm-block">
+                <div id="video-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <?php
+                            $posts = get_posts(array(
+                                'post_type' => 'videos'
+                            ));
+                            $i = 0;
+                            foreach ($posts as $post) {
+                                setup_postdata($post);
+                                if ($i == 0) {
+                                    $class = "item active";
+                                } else {
+                                    $class = "item ";
+                                }
+                                ?>
+                                <div class="<?php echo $class ?>">
+                                    <div class="video-container">
+                                        <div class="video" link="<?php echo get_field('link') ?>">
+                                            <div class="play-button">
+                                                <i class="fa fa-play"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="video-text"><span class="video-title"><?php the_title() ?> - </span><span class="video-author"><?php echo get_field('author') ?></span></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p class="video-text"><span class="video-title"><?php the_title() ?> - </span><span class="video-author"><?php echo get_field('author') ?></span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        $i++;
-                        wp_reset_postdata();
-                    }
-                 ?>
-            </div>
+                                <?php
+                                $i++;
+                                wp_reset_postdata();
+                            }
+                         ?>
+                    </div>
 
-            <!-- Controls -->
-            <a class="left carousel-control" href="#video-carousel" data-slide="prev"><span class="icon-prev"></span></a>
-            <a class="right carousel-control" href="#video-carousel" data-slide="next"><span class="icon-next"></span></a>
-        </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#video-carousel" data-slide="prev"><span class="icon-prev"></span></a>
+                    <a class="right carousel-control" href="#video-carousel" data-slide="next"><span class="icon-next"></span></a>
+                </div>
+            </div>
+    	</div>
     </div>
 </div>
 <script type="text/javascript">
@@ -115,8 +115,8 @@
         setBackground($(this));
     });
 
-    $(".video-carousel .item.active").click(function(event) {
-        playVideo($(this).find('.video'));
+    $("#video-carousel .video").click(function(event) {
+        playVideo($(this));
         stopCarousel();
 
     });
@@ -145,7 +145,7 @@
 
     function stopCarousel() {
         $("#video-carousel").carousel('pause');
-        $(".carousel-control").hide();
+        $("#video-carousel .carousel-control").hide();
     }
 
     function startCarousel() {

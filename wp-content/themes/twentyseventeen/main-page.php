@@ -36,7 +36,7 @@
             if (event.originalEvent.deltaY < 0) {
                 // Scroll up
                 if ($(window).scrollTop() == 0) {
-                    if ($(".moreNav").innerHeight() != 0) {
+                    if (mobile) {
                         animateBigNav();
                     } else {
                         event.preventDefault();
@@ -46,7 +46,7 @@
                 navCheckScrolling("up");
             } else {
                 // Scroll down
-                if ($(".top-header").css('opacity') > 0.5 && $(".moreNav").innerHeight() == 0) {
+                if ($(".top-header").css('opacity') > 0.5 && !mobile) {
                     // When overlay appears and not on mobile
                     event.preventDefault();
                 } else {
@@ -54,6 +54,14 @@
                 }
             }
         });
+
+        // // if (mobile) {
+        //     // $()
+        //     $(window).hammer().bind("swipe", function() {
+        //         console.log("swipe");
+        //     })
+        //     $(window).data("hammer").get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+        // // }
     </script>
 <?php
     get_footer();

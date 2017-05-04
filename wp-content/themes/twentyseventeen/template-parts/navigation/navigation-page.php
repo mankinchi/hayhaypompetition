@@ -53,7 +53,7 @@
  </div>
 <script>
     // XS menu
-    if ($(".moreNav").innerHeight() != 0) {
+    if (mobile) {
         $(".menu-top-container").hide();
         $(".moreNav").click(function(event) {
             if ($(this).attr('state') == 'close') {
@@ -68,7 +68,7 @@
     }
 
     function hideMenu() {
-        if ($(".moreNav").innerHeight() != 0) {
+        if (mobile) {
             $(".moreNav").trigger('click');
         }
     }

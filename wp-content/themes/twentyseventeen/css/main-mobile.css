@@ -56,6 +56,12 @@
         font-size: 6vw;
     }
 
+    #news-carousel .news-title {
+        line-height: 1.3;
+        height: 11.7vw;
+        border: none;
+    }
+
     .videos-modal .video-text {
         font-size: 3vw;
     }

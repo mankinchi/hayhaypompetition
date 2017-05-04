@@ -48,8 +48,14 @@
 <?php } ?>
 </div>
 <script>
-    // XS menu
+    var mobile;
     if ($(".moreNav").innerHeight() != 0) {
+        mobile = true;
+    } else {
+        mobile = false;
+    }
+    // XS menu
+    if (mobile) {
         $(".menu-top-container").hide();
         $(".moreNav").click(function(event) {
             if ($(this).attr('state') == 'close') {
@@ -64,7 +70,7 @@
     }
 
     function hideMenu() {
-        if ($(".moreNav").innerHeight() != 0) {
+        if (mobile) {
             $(".moreNav").trigger('click');
         }
     }

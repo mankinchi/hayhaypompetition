@@ -51,7 +51,7 @@
         }, 'linear');
         $(".nav-menu-top").css('background-color', 'black');
         // animate small menu
-        if ($(".nav-menu-top .moreNav").innerHeight() != 0) {
+        if (mobile) {
             $(".nav-menu-top .moreNav").animate({
                 'padding-top' : '18px'
             }, {
@@ -76,7 +76,7 @@
         }, 'linear');
         $(".nav-menu-top").css('background-color', 'transparent');
         // animate small menu
-        if ($(".nav-menu-top .moreNav").innerHeight() != 0) {
+        if (mobile) {
             $(".nav-menu-top .moreNav").animate({
                 'padding-top' : '25px'
             }, {
@@ -118,7 +118,7 @@
 
     }
 
-    if ($(".moreNav").innerHeight() == 0) {
+    if (!mobile) {
         $(".top-header .more").click(function(event) {
             hideOverlay();
         });
