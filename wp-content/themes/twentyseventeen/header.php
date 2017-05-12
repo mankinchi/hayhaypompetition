@@ -18,11 +18,21 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<?php
+			if (is_single()) {
+				$postId = $post->ID;
+			?>
+				<meta property="og:url" content="<?php echo get_permalink($postId) ?>">
+				<meta property="og:type" content="website">
+				<meta property="og:title" content="<?php the_title() ?>">
+				<meta property="og:description" content="<?php echo get_field('summary',$postId) ?>">
+				<meta property="og:image" content="<?php echo get_the_post_thumbnail_url($postId) ?>">
+			<?php }
+		 ?>
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class(); ?>>	
+	<body <?php body_class(); ?>>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

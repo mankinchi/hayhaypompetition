@@ -17,9 +17,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="news-title"><?php the_title() ?></div>
+                <div class="fb-share-button" data-href="<?php echo the_permalink() ?>" data-layout="button" data-size="small"></div>
                 <div class="body">
                     <div class="text"><?php the_content()  ?></div>
-                    <div class="author"><?php echo $fields["author"] ?></div>
                 </div>
             </div>
         </div>
