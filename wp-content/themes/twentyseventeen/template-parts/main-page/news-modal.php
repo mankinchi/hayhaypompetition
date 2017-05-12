@@ -43,11 +43,11 @@
 											<div class="sub-news">
 												<div class="row">
 													<div class="col-md-12 thumbnail-photo">
-														<img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
+															<a href="<?php echo the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" alt=""></a>
 													</div>
 													<div class="col-md-12 summary">
-														<div class="news-title"><?php echo the_title() ?></div>
-														<div class="content hide"><?php echo get_field('summary') ?></div>
+														<a href="<?php echo the_permalink() ?>"><div class="news-title"><?php echo the_title() ?></div></a>
+														<a href="<?php echo the_permalink() ?>"><div class="content"><?php echo get_field('summary') ?></div></a>
 														<div class="link hide"><?php echo the_permalink() ?></div>
 													</div>
 												</div>
@@ -94,4 +94,6 @@
 	});
 
 	$(".sub-news").eq(0).trigger('click');
+	$(".sub-news").eq(0).remove();
+	$(".sub-news").off();
 </script>
