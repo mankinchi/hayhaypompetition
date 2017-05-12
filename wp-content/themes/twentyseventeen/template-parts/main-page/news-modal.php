@@ -47,7 +47,7 @@
 													</div>
 													<div class="col-md-12 summary">
 														<a href="<?php echo the_permalink() ?>"><div class="news-title"><?php echo the_title() ?></div></a>
-														<a href="<?php echo the_permalink() ?>"><div class="content"><?php echo get_field('summary') ?></div></a>
+														<a href="<?php echo the_permalink() ?>"><div class="content hide"><?php echo get_field('summary') ?></div></a>
 														<div class="link hide"><?php echo the_permalink() ?></div>
 													</div>
 												</div>
