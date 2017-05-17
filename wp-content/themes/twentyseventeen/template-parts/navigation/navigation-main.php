@@ -34,7 +34,7 @@
         			<div class="row">
                         <div class="col-md-2 hidden-xs hidden-sm"></div>
         				<?php
-        					for ($i=0; $i <= 3; $i++) {
+        					for ($i=0; $i <= count($menu_array); $i++) {
         						echo "<div class='col-md-2 logo-item'>" . $menu_array[$i] . "</div>";
         					}
         				?>
@@ -54,7 +54,7 @@
     } else {
         mobile = false;
     }
-    // XS menu
+    // More button on phone
     if (mobile) {
         $(".menu-top-container").hide();
         $(".moreNav").click(function(event) {
@@ -67,7 +67,10 @@
             };
             $(this).find('i').toggleClass('fa-times fa-bars');
         });
-    }
+    };
+
+    // Highlight the current page
+    $(".nav-menu-top .logo-item").eq(<?php echo $id ?>).find("a").addClass('active');
 
 	function getDetails() {
 		FB.api('/me?fields=id,name', function(response) {
