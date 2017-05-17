@@ -132,6 +132,10 @@ a:focus {
     border-bottom: solid thin var(--news-title-border-color);
 }
 
+.news-title:hover {
+    color: #a29f99;
+}
+
 /* Video player */
 .video {
     cursor: pointer;

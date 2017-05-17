@@ -73,27 +73,18 @@
 	</div>
 </div>
 <script type="text/javascript">
-	$(".sub-news").click(function(event) {
-		if ($(this).hasClass('selected') == false) {
-			var toDisplayNew = $(this);
-			$(".sub-news.selected").removeClass('selected');
-			$(this).addClass('selected');
-			$(".main-news-container").fadeOut('slow', function() {
-				// Change data
-				var src = $(toDisplayNew).find('.thumbnail-photo img').attr('src');
-				var title = $(toDisplayNew).find('.news-title').text();
-				var link = $(toDisplayNew).find('.link').text();
-				var content = $(toDisplayNew).find('.content').text();
-				$(".main-news-container img").attr('src', src);
-				$(".main-news-container .news-title").text(title);
-				$(".main-news-container a").attr('href', link);
-				$(".main-news-container .short-description").text(content);
-				$(".main-news-container").fadeIn('slow');
-			});
-		}
-	});
+	// Set up main news = first sub news
+	// Remove first sub news
+	var toDisplayNew = $(".sub-news").eq(0);
 
-	$(".sub-news").eq(0).trigger('click');
+	var src = toDisplayNew.find('.thumbnail-photo img').attr('src');
+	var title = toDisplayNew.find('.news-title').text();
+	var link = toDisplayNew.find('.link').text();
+	var content = toDisplayNew.find('.content').text();
+	$(".main-news-container img").attr('src', src);
+	$(".main-news-container .news-title").text(title);
+	$(".main-news-container a").attr('href', link);
+	$(".main-news-container .short-description").text(content);
+
 	$(".sub-news").eq(0).remove();
-	$(".sub-news").off();
 </script>
