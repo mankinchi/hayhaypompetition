@@ -30,38 +30,6 @@
         $("body").animate({
             'opacity' : 1
         }, 2000);
-
-        $(window).on('wheel', function(event) {
-            // Window scroll
-            if (event.originalEvent.deltaY < 0) {
-                // Scroll up
-                if ($(window).scrollTop() == 0) {
-                    if (mobile) {
-                        animateBigNav();
-                    } else {
-                        event.preventDefault();
-                        showOverlay();
-                    }
-                }
-                navCheckScrolling("up");
-            } else {
-                // Scroll down
-                if ($(".top-header").css('opacity') > 0.5 && !mobile) {
-                    // When overlay appears and not on mobile
-                    event.preventDefault();
-                } else {
-                    navCheckScrolling("down");
-                }
-            }
-        });
-
-        // // if (mobile) {
-        //     // $()
-        //     $(window).hammer().bind("swipe", function() {
-        //         console.log("swipe");
-        //     })
-        //     $(window).data("hammer").get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-        // // }
     </script>
 <?php
     get_footer();

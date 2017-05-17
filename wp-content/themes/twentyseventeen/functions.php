@@ -529,7 +529,6 @@ function get_current_template( $echo = false ) {
 }
 
 function bootstrapjquery() {
-	wp_enqueue_style('google-font','https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700');
 	wp_enqueue_style('custom-font', get_template_directory_uri() . '/css/customfont.css');
 	wp_enqueue_script('tether', get_template_directory_uri() . '/js/tether.min.js');
 	wp_enqueue_script('global', get_template_directory_uri() . '/js/global.js');
@@ -539,8 +538,6 @@ function bootstrapjquery() {
 	wp_enqueue_style('global-mobile', get_template_directory_uri() . '/css/global-mobile.css');
 	wp_enqueue_script('jquery.3.x', get_template_directory_uri() . '/js/jquery.js');
 	wp_enqueue_script('bootstrap.js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery.3.x'));
-	wp_enqueue_script('hammertime', get_template_directory_uri() . '/js/hammer.min.js', array('jquery.3.x'));
-	wp_enqueue_script('hammertimejs', get_template_directory_uri() . '/js/jquery.hammer.js', array('hammertime'));
 
 	// determine what template is currently use and apply the appropriate css
 	$template = get_current_template();

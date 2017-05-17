@@ -42,14 +42,14 @@
 			ga('create', 'UA-97066743-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-		<?php if (has_nav_menu( 'top' ) ) : ?>
-			<div class="row nav-menu-top">
-				<?php
-					if (get_current_template() == "main-page.php") {
-						get_template_part( 'template-parts/navigation/navigation', 'main' );
-					} else {
-						get_template_part( 'template-parts/navigation/navigation', 'page' );
-					}
-				?>
+		<?php if (has_nav_menu( 'top' ) ) :
+				if (get_current_template() == "main-page.php") {
+					$class = "big-nav";
+				} else {
+					$class = "small-nav";
+				}
+			?>
+			<div class="row nav-menu-top <?php echo $class ?>">
+				<?php get_template_part( 'template-parts/navigation/navigation', 'main' ); ?>
 			</div>
 		<?php endif; ?>

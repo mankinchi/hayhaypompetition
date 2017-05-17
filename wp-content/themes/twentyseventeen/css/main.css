@@ -1,20 +1,6 @@
-/* MAIN PAGE */
-.nav-menu-top {
+/* Speciail small nav for main-page */
+.small-nav.nav-menu-top {
     position: fixed;
-    top: 0;
-    left: 15px;
-    right: 15px;
-    z-index: 5;
-    background-color: transparent;
-}
-
-.head-logo {
-    width: 70%;
-}
-
-.menu-top-container {
-    padding-top: 5%;
-    text-align: center;
 }
 
 /* HEADER INTRO - for front page */
@@ -23,12 +9,7 @@
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
+    height: 100vh;
 }
 
 .top-header .text {
@@ -62,28 +43,6 @@
 .top-header .fourth {
     font-family: 'Intro';
     font-size: 2vw;
-}
-
-.top-header .more {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 3;
-    cursor: pointer;
-}
-
-.top-header .more p {
-    font-size: 1.25vw;
-    color: white;
-    margin-bottom: -10px;
-    font-family: 'Robotol';
-    /*font-weight: 300;*/
-}
-
-.top-header .more img {
-    width: 8%
 }
 
 .bottom-header {

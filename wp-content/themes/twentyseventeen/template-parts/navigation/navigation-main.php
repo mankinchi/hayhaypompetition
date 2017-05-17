@@ -69,19 +69,6 @@
         });
     }
 
-    function hideMenu() {
-        if (mobile) {
-            $(".moreNav").trigger('click');
-        }
-    }
-
-	$(".menu-top-container a").eq(<?php echo $id ?>).addClass('active');
-	function switchMenuOption() {
-		$(".menu-top-container a.active").removeClass('active');
-        var pos = positionNameArray.indexOf(positionName);
-		$(".menu-top-container a").eq(pos).addClass('active');
-	};
-
 	function getDetails() {
 		FB.api('/me?fields=id,name', function(response) {
 			$(".menu-top-container a").last().text('HI ' + response["name"].toUpperCase());
@@ -123,83 +110,14 @@
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 
-    function navCheckScrolling(direction) {
-        switch (direction) {
-            case "up":
-                var currentPos = positionNameArray.indexOf(positionName);
-                if (currentPos > 1) {
-                    var checkedPos = positionNameArray[currentPos - 1];
-                    var checkedEl = $("div[positionName='" + checkedPos + "']");
-
-                    var limit = checkedEl.offset().top + checkedEl.innerHeight()/2;
-                    var windowPos = $(window).scrollTop();
-                    if (windowPos <= limit) {
-                        positionName = checkedPos;
-                        switchMenuOption();
-                    }
-                };
-                break;
-            case "down":
-                var currentPos = positionNameArray.indexOf(positionName);
-                if (positionName == "#trang-chu") {
-                    animateSmallNav();
-                    positionName = positionNameArray[currentPos + 1];
-                } else {
-                    if (currentPos <= positionNameArray.length - 2) {
-                        var checkedPos = positionNameArray[currentPos + 1];
-                        var checkedEl = $("div[positionName='" + checkedPos + "']");
-                        var limit = checkedEl.offset().top + checkedEl.innerHeight()/2;
-                        var windowPos = $(window).scrollTop() + $(window).innerHeight();
-                        if (windowPos >= limit) {
-                            positionName = checkedPos;
-                        }
-                    };
-                }
-                switchMenuOption();
-                break;
-            default:
-                break;
-        }
-    }
-
-    var positionName = "#trang-chu";
-    var positionNameArray = new Array();
-    $(".menu-top-container a").each(function(index, el) {
-        var location = $(el).attr('href');
-        if (location[0] == "#") {
-            positionNameArray.push($(el).attr('href'));
-        }
-    });
-
-	$(".menu-top-container a").click(function(event) {
-		var location = $(this).attr('href');
-        if (location != positionName) {
-            hideMenu();
-            if (location[0] != "#") {
-                // Nut Dang ky => link bitly
-                return true;
+    if ($(".nav-menu-top").hasClass('big-nav')) {
+        setInterval(function() {
+            var top = $(window).scrollTop();
+            if (top >= 10) {
+                $(".nav-menu-top").removeClass('big-nav').addClass('small-nav');
             } else {
-                if (location == "#trang-chu" && positionName != "#trang-chu") {
-                    $('html, body').animate({
-    					scrollTop : 0
-    				}, 400).promise().then(function() {
-    					showOverlay();
-    				});
-                } else {
-                    if (location != "#trang-chu" && positionName == "#trang-chu") {
-                        hideOverlay();
-                    };
-    				var element = $("div[positionName='"+ location +"']");
-    				$('html, body').animate({
-    					scrollTop : $(element).offset().top
-    				}, 400);
-                }
-                positionName = location;
-                switchMenuOption();
-                return false;
+                $(".nav-menu-top").removeClass('small-nav').addClass('big-nav');
             }
-        } else {
-            return false;
-        }
-	});
+        },100);
+    }
 </script>

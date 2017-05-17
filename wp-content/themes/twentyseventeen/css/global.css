@@ -30,7 +30,7 @@ a:focus {
 }
 
 .page-modal .modal-header {
-    margin-bottom: 3%;
+    margin-bottom: 30px;
     border: none;
 }
 
@@ -68,17 +68,16 @@ a:focus {
 }
 
 /* Navigation bar */
+/* For both state */
 .nav-menu-top {
-    position: inherit;
-    background-color: black;
-}
-
-.head-logo {
-    width: 50%;
+    position: fixed;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    z-index: 5;
 }
 
 .menu-top-container {
-    padding-top: 4%;
     text-align: center;
 }
 
@@ -103,6 +102,34 @@ a:focus {
 
 .menu-top-container a:hover {
     color: #EF4623;
+}
+
+/* Big state of Nav - only appear on main page */
+.big-nav.nav-menu-top {
+    background-color: transparent;
+}
+
+.big-nav .head-logo {
+    width: 70%;
+}
+
+.big-nav .menu-top-container {
+    padding-top: 5%;
+}
+
+/* Small state of Nav - appears both in main page and other page*/
+/* Other pages only have small state */
+.small-nav.nav-menu-top {
+    position: inherit;
+    background-color: black;
+}
+
+.small-nav .head-logo {
+    width: 40%;
+}
+
+.small-nav .menu-top-container {
+    padding-top: 3%;
 }
 
 /* "DOC THEM" button */

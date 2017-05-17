@@ -1,34 +1,5 @@
 /* SM and lower */
 @media (max-width:992px) {
-    .page-modal {
-        padding: 10vw 0;
-    }
-
-    .page-modal-title {
-        font-size: 10vw !important;
-    }
-
-    .sponsors-modal .row-2 .logo {
-        height: 130%;
-    }
-
-    .sponsors-modal .row-3 .logo {
-        height: 70%;
-    }
-
-    .sponsors-modal .logo-container-box {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .sponsors-modal .copyright {
-        font-size: 2vw;
-    }
-
-    .head-logo {
-        width: 40%;
-    }
-
     .moreNav {
         text-align: right;
         padding-top: 18px !important;
@@ -55,6 +26,31 @@
     .menu-top-container .logo-item {
         padding-top: 2px;
         padding-bottom: 2px;
+    }
+
+    .page-modal {
+        padding: 10vw 0;
+    }
+
+    .page-modal-title {
+        font-size: 10vw !important;
+    }
+
+    .sponsors-modal .row-2 .logo {
+        height: 130%;
+    }
+
+    .sponsors-modal .row-3 .logo {
+        height: 70%;
+    }
+
+    .sponsors-modal .logo-container-box {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .sponsors-modal .copyright {
+        font-size: 2vw;
     }
 
     .news-modal .image-container {
