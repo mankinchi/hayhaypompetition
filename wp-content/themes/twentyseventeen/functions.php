@@ -542,9 +542,12 @@ function bootstrapjquery() {
 	// determine what template is currently use and apply the appropriate css
 	$template = get_current_template();
 	switch ($template) {
+		case 'main-page-2.php':
 		case 'main-page.php':
 			wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 			wp_enqueue_style('main-mobile', get_template_directory_uri() . '/css/main-mobile.css');
+			wp_enqueue_style('flipclock-css', get_template_directory_uri() . '/css/flipclock.css');
+			wp_enqueue_script('flipclock-js', get_template_directory_uri() . '/js/flipclock.min.js');
 			break;
 		case 'info-page.php':
 			wp_enqueue_style('info-page', get_template_directory_uri() . '/css/info-page.css');

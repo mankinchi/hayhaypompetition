@@ -17,6 +17,20 @@
             <br />
             <p class="third">Vòng Audition</p>
             <p class="fourth">17/4 - 30/5</p>
+            <div class="clock-wrapper">
+                <div class="clock"></div>
+            </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    var startDate = new Date();
+    var endDate = new Date('30 May 2017 23:59');
+    var diff = Math.floor((endDate - startDate) / 1000)
+    var clock = $(".clock").FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        showSeconds: false,
+        countdown: true,
+    });
+</script>

@@ -45,6 +45,19 @@
     font-size: 2vw;
 }
 
+/* Customize Flip clock */
+.clock {
+    width: auto !important;
+}
+
+.flip-clock-label {
+    display: none;
+}
+
+.flip-clock-dot {
+    background-color: white !important;
+}
+
 .bottom-header {
     background: url('../assets/images/bottom-intro.png');
     background-attachment: fixed;
