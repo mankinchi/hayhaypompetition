@@ -5,32 +5,35 @@
 
 /* HEADER INTRO - for front page */
 .top-header {
-    background: url('../assets/images/microphone.jpg');
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
     height: 100vh;
 }
 
+.top-header .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .top-header .text {
-    text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100%;
     z-index: 3
 }
 
 .top-header .first {
-    font-family: 'IntroThin';
+    font-family: 'Robotot';
     font-size: 3.4vw;
     margin-bottom: -10px;
 }
 
 .top-header .second {
-    font-family: 'Intro';
+    font-family: 'Robotomi';
     font-size: 3.9vw;
 }
 
@@ -48,14 +51,50 @@
 /* Customize Flip clock */
 .clock {
     width: auto !important;
-}
-
-.flip-clock-label {
-    display: none;
+    zoom: 0.5;
+   -moz-transform: scale(0.5);
 }
 
 .flip-clock-dot {
-    background-color: white !important;
+    display: none;
+}
+
+.flip-clock-label {
+    top: auto !important;
+    bottom: -1.5em !important;
+    font-size: 25px !important;
+    right: -97px !important;
+}
+
+.flip-clock-divider.minutes .flip-clock-label {
+    right: -115px !important;
+}
+
+.flip-clock-divider.seconds .flip-clock-label {
+    right: -115px !important;
+}
+
+.flip-clock-divider::after {
+    content: ',';
+    font-size: 80px;
+    color: black;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.flip-clock-divider:first-child::after {
+    content: none;
+}
+
+.flip-clock-dot {
+    display: none !important;
+}
+
+.flip-clock-wrapper .inn {
+    color: #533f38 !important;
 }
 
 .bottom-header {
@@ -91,12 +130,12 @@
     font-family: 'Robotob';
 }
 
-.bottom-header .underline {
-    width: 30%;
+.bottom-header .icon-row {
+    margin: 40px auto;
 }
 
-.bottom-header a:hover {
-    text-decoration: none;
+.bottom-header .image-sub {
+    margin-top: 10px;
 }
 
 /* CONTESTANT PART - of front page*/

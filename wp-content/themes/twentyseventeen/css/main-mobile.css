@@ -21,11 +21,6 @@
         font-size: 8vw;
     }
 
-    /* Time Countdown */
-    .flip-clock-wrapper ul {
-        width: 47px !important;
-    }
-
     .register-modal .text-container button {
         font-size: 4vw;
     }

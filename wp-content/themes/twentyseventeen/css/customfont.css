@@ -24,6 +24,11 @@
 }
 
 @font-face {
+    font-family: 'Robotomi';
+    src: url('../assets/fonts/Robotomi.ttf');
+}
+
+@font-face {
     font-family: 'Robotol';
     src: url('../assets/fonts/Robotol.ttf');
 }
