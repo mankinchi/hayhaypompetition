@@ -1,6 +1,6 @@
 <?php
     // Plugin name: Custom Post Type
-    // Description: Create custom post type for: Contestant, News
+    // Description: Create custom post type for: Contestant, News, Sponsor
     // Version: 1.0
     // Creator: Tri Nguyen
 
@@ -17,8 +17,7 @@
             'show_ui'                 => true,
             'show_in_admin_bar'       => true,
             'menu_icon'               => 'dashicons-businessman',
-    		'labels'                  => $labels,
-            'supports'                => array('title','thumbnail')
+    		'labels'                  => $labels
     	);
     	register_post_type('contestants', $args );
     }
@@ -68,4 +67,26 @@
     }
 
     add_action('init','video_post_type');
+
+    function sponsor_post_type() {
+        $labels = array(
+    		'name'               => 'Sponsors',
+    		'singular_name'      => 'sponsor',
+    		'menu_name'          => 'Sponsors',
+    		'name_admin_bar'     => 'Sponsor',
+    	);
+
+    	$args = array(
+    		'public'                  => true,
+            'show_ui'                 => true,
+            'show_in_admin_bar'       => true,
+            'menu_icon'               => 'dashicons-groups',
+    		'labels'                  => $labels,
+            'supports'                => array('title')
+    	);
+    	register_post_type('sponsors', $args );
+        flush_rewrite_rules();
+    }
+
+    add_action('init','sponsor_post_type');
  ?>
