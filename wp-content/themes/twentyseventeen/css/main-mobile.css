@@ -17,6 +17,12 @@
         font-size: 7vw;
     }
 
+    /* FLipclock */
+    .flip-clock-wrapper .inn {
+        zoom: 0.8;
+        moz-transform: scale(0.8);
+    }
+
     .register-modal .text-container {
         font-size: 8vw;
     }

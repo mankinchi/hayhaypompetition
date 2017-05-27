@@ -51,8 +51,8 @@
 /* Customize Flip clock */
 .clock {
     width: auto !important;
-    zoom: 0.5;
-   -moz-transform: scale(0.5);
+    zoom: 0.45;
+   -moz-transform: scale(0.45);
 }
 
 .flip-clock-dot {
