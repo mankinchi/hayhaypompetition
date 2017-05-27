@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'IntroBold';
+    src: url('../assets/fonts/IntroBold.otf');
+}
+
+@font-face {
     font-family: 'IntroThin';
     src: url('../assets/fonts/IntroThin.otf');
 }
@@ -31,6 +36,11 @@
 @font-face {
     font-family: 'Robotol';
     src: url('../assets/fonts/Robotol.ttf');
+}
+
+@font-face {
+    font-family: 'Robotoli';
+    src: url('../assets/fonts/Robotoli.ttf');
 }
 
 @font-face {

@@ -49,6 +49,22 @@
         font-size: 3vw;
     }
 
+    /* QUOTE MODAL */
+    .quote-modal .sponsor-name {
+        margin-top: 40px;
+    }
+
+    .quote-modal .sponsor-quote {
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .quote-modal .mobile-divider {
+        height: 1px;
+        margin-bottom: 15px;
+        background-color: black;
+    }
+
     .sponsor-modal .name {
         font-size: 6vw
     }
