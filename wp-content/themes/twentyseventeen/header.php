@@ -43,11 +43,7 @@
 			ga('send', 'pageview');
 		</script>
 		<?php if (has_nav_menu( 'top' ) ) :
-				if (get_current_template() == "main-page.php") {
-					$class = "big-nav";
-				} else {
-					$class = "small-nav";
-				}
+				$class = "small-nav";
 			?>
 			<div class="row nav-menu-top <?php echo $class ?>">
 				<?php get_template_part( 'template-parts/navigation/navigation', 'main' ); ?>

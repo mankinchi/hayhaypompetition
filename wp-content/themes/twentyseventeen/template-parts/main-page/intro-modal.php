@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="second">
-                    <strong>BAY Competition 2017</strong> lần đầu tiên được tổ chức bởi <strong>Elite TALKS Inc</strong>. Đây là nơi truyền cảm hứng, chắp cánh cho sinh viên nói lên ước mơ và hoài bão của mình.
+                    BAY Competition 2017 lần đầu tiên được tổ chức bởi Elite TALKS Inc. là nơi truyền cảm hứng, chắp cánh cho sinh viên nói lên ước mơ và hoài bão của mình.
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="image-sub">14-24t</div>
+                            <div class="image-sub">14-23t</div>
                         </div>
                     </div>
                 </div>

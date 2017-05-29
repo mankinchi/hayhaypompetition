@@ -30,6 +30,7 @@
     font-family: 'Robotot';
     font-size: 3.4vw;
     margin-bottom: -10px;
+    line-height: 1.2;
 }
 
 .top-header .second {
@@ -94,7 +95,7 @@
 }
 
 .flip-clock-wrapper .inn {
-    color: #533f38 !important;
+    color: white !important;
 }
 
 .bottom-header {
@@ -120,9 +121,9 @@
 }
 
 .bottom-header .second {
-    font-family: 'Robotol';
+    font-family: 'Robotot';
     margin-top: 30px;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     line-height: 1.8;
 }
 
