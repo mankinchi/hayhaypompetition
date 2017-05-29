@@ -112,15 +112,4 @@
 		js.src = "//connect.facebook.net/en_US/sdk.js";
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
-
-    if ($(".nav-menu-top").hasClass('big-nav')) {
-        setInterval(function() {
-            var top = $(window).scrollTop();
-            if (top >= 10) {
-                $(".nav-menu-top").removeClass('big-nav').addClass('small-nav');
-            } else {
-                $(".nav-menu-top").removeClass('small-nav').addClass('big-nav');
-            }
-        },100);
-    }
 </script>
