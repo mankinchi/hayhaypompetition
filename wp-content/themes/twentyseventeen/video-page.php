@@ -134,12 +134,12 @@
         // if (fbid == 0) {
         //     FB.getLoginStatus(function(response) {
     	// 		if (response["status"] == "connected") {
-    	// 	        fbid = getFbID(ajaxCall);
+    	// 	        getFbID(ajaxCall);
     	// 		} else {
     	// 			event.preventDefault();
     	// 			FB.login(function(response) {
     	// 				if (response["status"] == "connected") {
-    	// 					fbid = getFbID(ajaxCall);
+    	// 					getFbID(ajaxCall);
     	// 				}
     	// 			});
     	// 		}
