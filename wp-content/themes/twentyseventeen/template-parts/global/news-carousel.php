@@ -17,7 +17,7 @@
                 ?>
                 <div class="<?php echo $class ?>">
                     <div class="row">
-                        <div class="container ratio169">
+                        <div class="ratiocontainer ratio169">
                             <a href="<?php echo the_permalink() ?>"><img class="content" src="<?php echo get_the_post_thumbnail_url() ?>" alt=""></a>
                         </div>
                         <div class="col-md-12 summary">
