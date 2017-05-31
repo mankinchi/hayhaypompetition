@@ -30,7 +30,7 @@
                     foreach ($videos as $post) :
                         setup_postdata($post);
                         $fields = get_fields(); ?>
-                            <div class="col-md-3 video-block">
+                            <div class="col-md-3 col-xs-6 video-block">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="cover ratiocontainer ratio11">
@@ -78,10 +78,10 @@
                                     </div>
                                 </div>
                                 <div class="row voteRow">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-xs-6">
                                         <div class="modal-vote-button">VOTE</div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-xs-6">
                                         <div class="modal-vote"></div>
                                     </div>
                                 </div>
@@ -89,11 +89,19 @@
                             <div class="col-md-4">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="modal-author-image">
-                                            <img src="" alt=""/>
+                                        <div class="row">
+                                            <div class="col-md-12 col-xs-4">
+                                                <div class="modal-author-image">
+                                                    <img src="" alt=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-xs-8">
+                                                <div class="modal-author"></div>
+                                            </div>
+                                            <div class="col-md-12 col-xs-8">
+                                                <div class="modal-bio"></div>
+                                            </div>
                                         </div>
-                                        <div class="modal-author"></div>
-                                        <div class="modal-bio"></div>
                                     </div>
                                 </div>
                             </div>

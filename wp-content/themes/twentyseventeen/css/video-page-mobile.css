@@ -1,0 +1,33 @@
+@media (max-width:992px) {
+    .play-button i {
+        font-size: 5vw;
+        background-color: red;
+    }
+
+    .name {
+        font-size: 4vw;
+    }
+
+    .author {
+        font-size: 3vw;
+    }
+
+    .modal-dialog {
+        top: 8vh;
+    }
+
+    .modal-author {
+        margin-top: 0;
+        font-size: 4vw;
+        line-height: 0.7;
+    }
+
+    .voteRow {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .modal-vote-button, .modal-vote {
+        font-size: 3.5vw;
+    }
+}

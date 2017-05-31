@@ -559,6 +559,7 @@ function bootstrapjquery() {
 			break;
 		case 'video-page.php':
 			wp_enqueue_style('video-page', get_template_directory_uri() . '/css/video-page.css');
+			wp_enqueue_style('video-page-mobile', get_template_directory_uri() . '/css/video-page-mobile.css');
 			break;
 		case 'single-contestants.php':
 			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');

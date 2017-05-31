@@ -1,10 +1,7 @@
 /* Video Container */
 .video-block {
     cursor: pointer;
-    border: solid thin #e4e4e4;
-    width: 23%;
     padding: 10px;
-    margin: auto 1%;
     margin-bottom: 10px;
 }
 
