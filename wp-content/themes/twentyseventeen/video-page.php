@@ -112,6 +112,11 @@
         </div>
     </div>
 </div>
+<?php
+    get_template_part('template-parts/global/footer');
+    get_footer();
+?>
+
 <script type="text/javascript">
     var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
