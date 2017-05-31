@@ -118,6 +118,7 @@
 ?>
 
 <script type="text/javascript">
+    var fbid = 0;
     var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
     // When click on voting button
@@ -128,24 +129,24 @@
         }
         $(this).addClass('disabled');
 
-        var fbid = "82983908";
         ajaxCall(fbid);
         // Uncomment when upload
-        // FB.getLoginStatus(function(response) {
-		// 	if (response["status"] == "connected") {
-		//         fbid = getFbID();
-        //         ajaxCall(fbid);
-		// 	} else {
-		// 		event.preventDefault();
-		// 		FB.login(function(response) {
-		// 			if (response["status"] == "connected") {
-		// 				fbid = getFbID();
-        //                 ajaxCall(fbid);
-		// 			}
-		// 		});
-		// 	}
-		// });
-
+        // if (fbid == 0) {
+        //     FB.getLoginStatus(function(response) {
+    	// 		if (response["status"] == "connected") {
+    	// 	        fbid = getFbID(ajaxCall);
+    	// 		} else {
+    	// 			event.preventDefault();
+    	// 			FB.login(function(response) {
+    	// 				if (response["status"] == "connected") {
+    	// 					fbid = getFbID(ajaxCall);
+    	// 				}
+    	// 			});
+    	// 		}
+    	// 	});
+        // } else {
+        //     ajaxCall(fbid);
+        // };
     });
 
     function ajaxCall(fbid) {
@@ -183,9 +184,9 @@
         });
     }
 
-    function getFbID() {
+    function getFbID(callbackFunc) {
         FB.api('/me?fields=id', function(response) {
-            return response['id'];
+            callbackFunc(response['id']);
         })
     };
 
