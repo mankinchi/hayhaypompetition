@@ -41,7 +41,7 @@ a:focus {
 }
 
 /* Fixed Ratio */
-.container {
+.ratiocontainer {
     position: relative;
 }
 
@@ -49,12 +49,17 @@ a:focus {
     padding-top: 56.25%;
 }
 
-.container .content {
+.ratio11 {
+    padding-top: 100%;
+}
+
+.ratiocontainer .content {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* Underline */
@@ -206,7 +211,7 @@ a:focus {
     background-color: #373838;
 }
 
-.play-button i.hover {
+.play-button i.hover, .play-button i:hover {
     background-color: red;
 }
 
