@@ -536,6 +536,7 @@ function bootstrapjquery() {
 	wp_enqueue_style('fontAwesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 	wp_enqueue_style('global', get_template_directory_uri() . '/css/global.css');
 	wp_enqueue_style('global-mobile', get_template_directory_uri() . '/css/global-mobile.css');
+	wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.min.css');
 	wp_enqueue_script('jquery.3.x', get_template_directory_uri() . '/js/jquery.js');
 	wp_enqueue_script('bootstrap.js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery.3.x'));
 
@@ -555,6 +556,9 @@ function bootstrapjquery() {
 			break;
 		case 'news-page.php':
 			wp_enqueue_style('info-page', get_template_directory_uri() . '/css/news-page.css');
+			break;
+		case 'video-page.php':
+			wp_enqueue_style('video-page', get_template_directory_uri() . '/css/video-page.css');
 			break;
 		case 'single-contestants.php':
 			wp_enqueue_style('contestant-page', get_template_directory_uri() . '/css/contestant-page.css');

@@ -71,15 +71,7 @@
 
     // Highlight the current page
     $(".nav-menu-top .logo-item").eq(<?php echo $id ?>).find("a").addClass('active');
-
-	function getDetails() {
-		FB.api('/me?fields=id,name', function(response) {
-			$(".menu-top-container a").last().text('HI ' + response["name"].toUpperCase());
-			sessionStorage.setItem('id',response['id']);
-			console.log(response);
-		})
-	};
-
+    
 	window.fbAsyncInit = function() {
 		FB.init({
 			appId      : '378664565849556',
@@ -87,22 +79,6 @@
 			xfbml      : true,
 			version    : 'v2.8'
 		});
-
-		// TODO: move this to when people click "Dang Nhap"
-		// FB.getLoginStatus(function(response) {
-		// 	if (response["status"] == "connected") {
-		// 		getDetails();
-		// 	} else {
-		// 		$(".menu-top-container a").eq(5).click(function(event) {
-		// 			event.preventDefault();
-		// 			FB.login(function(response) {
-		// 				if (response["status"] == "connected") {
-		// 					getDetails();
-		// 				}
-		// 			});
-		// 		});
-		// 	}
-		// });
 	};
 
 	(function(d, s, id){

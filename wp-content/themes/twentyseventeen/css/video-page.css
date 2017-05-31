@@ -1,0 +1,91 @@
+/* Video Container */
+.video-block {
+    cursor: pointer;
+    border: solid thin #e4e4e4;
+    width: 23%;
+    padding: 10px;
+    margin: auto 1%;
+    margin-bottom: 10px;
+}
+
+.play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.play-button i {
+    font-size: 1.4vw;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.name, .author {
+    text-align: center;
+}
+
+.name {
+    font-family: 'Robotot';
+    font-size: 1.2vw;
+    margin-top: 10px;
+}
+
+.author {
+    font-size: 0.8vw;
+    font-family: 'Robotob';
+}
+
+.modal-dialog .modal-header {
+    margin-bottom: 0;
+}
+
+.modal-dialog .modal-body {
+    padding: 5px 15px;
+}
+
+.modal-info {
+    padding: 15px;
+}
+
+.modal-author-image img {
+    width: 100%;
+}
+
+.modal-author {
+    margin: 10px 0;
+    font-family: 'RobotoSlabb';
+    font-size: 1.3vw;
+}
+
+.voteRow {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-vote-button {
+    padding: 20px 0;
+    background-color: #EF4623;
+    border-radius: 12px;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.modal-vote-button.disabled {
+    background-color: grey;
+}
+
+.modal-vote-button:not(.modal-vote-button.disabled):hover {
+    background-color: #ea6449;
+}
+
+.modal-vote {
+    padding: 18px 0;
+    background-color: white;
+    border-radius: 12px;
+    color: #EF4623;
+    border: solid #EF4623;
+    font-size: 1vw;
+}
