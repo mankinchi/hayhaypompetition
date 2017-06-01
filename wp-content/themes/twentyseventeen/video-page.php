@@ -9,7 +9,7 @@
  * @version 1.0
  */
 
-    $id = 1;
+    $id = 3;
     get_header();
 ?>
 <div class="row page-modal">
@@ -129,24 +129,23 @@
         }
         $(this).addClass('disabled');
 
+        // Use for offline
+        fbid = '123123123';
         ajaxCall(fbid);
         // Uncomment when upload
         // if (fbid == 0) {
-        //     FB.getLoginStatus(function(response) {
-    	// 		if (response["status"] == "connected") {
-    	// 	        getFbID(ajaxCall);
+        //     FB.login(function(response) {
+        //         $(".info").text(JSON.stringify(response));
+    	// 		if (response.authResponse) {
+    	// 			getFbID(ajaxCall);
     	// 		} else {
-    	// 			event.preventDefault();
-    	// 			FB.login(function(response) {
-    	// 				if (response["status"] == "connected") {
-    	// 					getFbID(ajaxCall);
-    	// 				}
-    	// 			});
-    	// 		}
+        //             // They didn't log into facebook
+        //             $(".modal-info.danger").fadeIn();
+        //         }
     	// 	});
         // } else {
         //     ajaxCall(fbid);
-        // };
+        // }
     });
 
     function ajaxCall(fbid) {
@@ -168,6 +167,7 @@
                 case '0':
                     var vote = parseInt($(".modal-vote").text());
                     $(".modal-vote").text(++vote);
+                    $(".video-block.open .vote").text(vote);
                     $(".modal-info.success").fadeIn();
                     break;
                 case '1':
@@ -186,11 +186,13 @@
 
     function getFbID(callbackFunc) {
         FB.api('/me?fields=id', function(response) {
+            fbid = response['id'];
             callbackFunc(response['id']);
         })
     };
 
     $(".video-block").click(function(event) {
+        $(this).addClass('open');
         updateModal($(this));
         $(".modal-info").hide();
         $("#modal").modal('show');
@@ -198,6 +200,7 @@
 
     $("#modal").on('hide.bs.modal', function(event) {
         $(".modal-video .ratiocontainer").empty();
+        $(".video-block.open").removeClass('open');
     });
 
     function updateModal(videoToDisplay) {

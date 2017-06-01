@@ -16,6 +16,10 @@
         top: 8vh;
     }
 
+    .modal-dialog .content {
+        object-fit: initial;
+    }
+
     .modal-author {
         margin-top: 0;
         font-size: 4vw;
