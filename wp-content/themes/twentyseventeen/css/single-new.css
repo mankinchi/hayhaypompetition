@@ -26,6 +26,10 @@
     font-size: 1.1vw;
 }
 
+.body .text figure {
+    width: 100% !important;
+}
+
 .body .text img{
     display: block;
     margin: 0 auto;
