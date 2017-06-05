@@ -37,8 +37,8 @@
                                             <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
                                             <div class="play-button"><i class="fa fa-play"></i></div>
                                         </div>
-                                        <div class="name"><?php the_title() ?></div>
                                         <div class="author"><?php echo $fields["author"]; ?></div>
+                                        <div class="name"><?php the_title() ?></div>
                                         <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
                                         <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
                                         <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
@@ -51,7 +51,7 @@
                 endif;
              ?>
         </div>
-        <div class="modal animated rubberBand" id="modal" role="dialog">
+        <div class="modal animated fadeIn" id="modal" role="dialog">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -90,15 +90,15 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="row">
-                                            <div class="col-md-12 col-xs-4">
-                                                <div class="modal-author-image">
-                                                    <img src="" alt=""/>
+                                            <div class="col-md-12 col-xs-5">
+                                                <div class="modal-author-image ratiocontainer ratio11">
+                                                    <img class="content" src="" alt=""/>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12 col-xs-8">
+                                            <div class="col-md-12 col-xs-7">
                                                 <div class="modal-author"></div>
                                             </div>
-                                            <div class="col-md-12 col-xs-8">
+                                            <div class="col-md-12 col-xs-12">
                                                 <div class="modal-bio"></div>
                                             </div>
                                         </div>
@@ -190,6 +190,14 @@
             callbackFunc(response['id']);
         })
     };
+
+    if ($(window).width() >= 992) {
+        $(".video-block").hover(function() {
+            $(this).find('.play-button i').addClass('hover');
+        }, function() {
+            $(this).find('.play-button i').removeClass('hover');
+        });
+    }
 
     $(".video-block").click(function(event) {
         $(this).addClass('open');

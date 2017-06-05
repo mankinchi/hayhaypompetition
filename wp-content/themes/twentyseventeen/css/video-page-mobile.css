@@ -5,15 +5,27 @@
     }
 
     .name {
-        font-size: 4vw;
-    }
-
-    .author {
         font-size: 3vw;
     }
 
+    .author {
+        font-size: 4vw;
+    }
+
     .modal-dialog {
-        top: 8vh;
+        margin: 18% 2%;
+    }
+
+    .modal-header {
+        padding: 10px;
+    }
+
+    .modal-title {
+        font-size: 4vw;
+    }
+
+    .modal-body {
+        padding: 5px 10px;
     }
 
     .modal-dialog .content {
@@ -21,9 +33,13 @@
     }
 
     .modal-author {
-        margin-top: 0;
+        margin-top: 28%;
         font-size: 4vw;
         line-height: 0.7;
+    }
+
+    .modal-bio {
+        margin-top: 10px;
     }
 
     .voteRow {
