@@ -24,9 +24,13 @@
             <?php
                 $videos = get_posts(array(
                     'post_type' => 'videos',
-                    'numberposts' => -1
+                    'numberposts' => -1,
+                    'meta_key'		=> 'main_page',
+                    'meta_value'	=> 'false',
+                    'orderby' => 'rand'
                 ));
                 if ($videos):
+                    $counter = 0;
                     foreach ($videos as $post) :
                         setup_postdata($post);
                         $fields = get_fields(); ?>
@@ -37,15 +41,17 @@
                                             <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
                                             <div class="play-button"><i class="fa fa-play"></i></div>
                                         </div>
-                                        <div class="author"><?php echo $fields["author"]; ?></div>
-                                        <div class="name"><?php the_title() ?></div>
+                                        <div class="author"><?php the_title(); ?></div>
+                                        <div class="name"><?php echo $fields["author"]; ?></div>
                                         <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
                                         <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
                                         <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
                                         <div class="vote hidden"><?php echo $fields["vote"]; ?></div>
+                                        <div class="sbd hidden"><?php echo $fields["sbd"]; ?></div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="clear"></div>
                         <?php wp_reset_postdata();
                     endforeach;
                 endif;
@@ -78,11 +84,14 @@
                                     </div>
                                 </div>
                                 <div class="row voteRow">
-                                    <div class="col-md-6 col-xs-6">
+                                    <div class="col-xs-4">
                                         <div class="modal-vote-button">VOTE</div>
                                     </div>
-                                    <div class="col-md-6 col-xs-6">
+                                    <div class="col-xs-4">
                                         <div class="modal-vote"></div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="fb-share"><i class="fa fa-facebook-official"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +113,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="modal-sbd hidden"></div>
                             </div>
                         </div>
                     </div>
@@ -130,22 +140,22 @@
         $(this).addClass('disabled');
 
         // Use for offline
-        fbid = '123123123';
-        ajaxCall(fbid);
+        // fbid = '123123123';
+        // ajaxCall(fbid);
         // Uncomment when upload
-        // if (fbid == 0) {
-        //     FB.login(function(response) {
-        //         $(".info").text(JSON.stringify(response));
-    	// 		if (response.authResponse) {
-    	// 			getFbID(ajaxCall);
-    	// 		} else {
-        //             // They didn't log into facebook
-        //             $(".modal-info.danger").fadeIn();
-        //         }
-    	// 	});
-        // } else {
-        //     ajaxCall(fbid);
-        // }
+        if (fbid == 0) {
+            FB.login(function(response) {
+                $(".info").text(JSON.stringify(response));
+    			if (response.authResponse) {
+    				getFbID(ajaxCall);
+    			} else {
+                    // They didn't log into facebook
+                    $(".modal-info.danger").fadeIn();
+                }
+    		});
+        } else {
+            ajaxCall(fbid);
+        }
     });
 
     function ajaxCall(fbid) {
@@ -154,7 +164,7 @@
             type: 'POST',
             data: {
                 'action': 'receive_voting',
-                'name': $(".modal-author").text(),
+                'sbd': $(".modal-sbd").text(),
                 'fbid': fbid
             }
         })
@@ -191,6 +201,14 @@
         })
     };
 
+    // When click on Facebook share
+    $(".fb-share").click(function(event) {
+        FB.ui({
+            method: 'share',
+            href: '<?php echo get_permalink(get_page_by_path('videos')) ?>?sbd=' + pageSbd
+        })
+    });
+
     if ($(window).width() >= 992) {
         $(".video-block").hover(function() {
             $(this).find('.play-button i').addClass('hover');
@@ -218,6 +236,7 @@
         var bio = videoToDisplay.find('.bio').html();
         var vote = videoToDisplay.find('.vote').text();
         var videoLink = videoToDisplay.find('.video-link').text();
+        var sbd = videoToDisplay.find(".sbd").text();
 
         // Update info
         $(".modal-title").text(name);
@@ -225,12 +244,27 @@
         $(".modal-author").text(author);
         $(".modal-bio").html(bio);
         $(".modal-vote").text(vote);
+        $(".modal-sbd").text(sbd);
 
         // Play Video
         var iframe = $("<iframe>", {
-            'src' : 'https://www.youtube.com/embed/' + videoLink + '?autoplay=1',
+            'src' : 'https://www.youtube.com/embed/' + videoLink + '?autoplay=1&showinfo=0',
             'class': 'content'
         });
         $(".modal-video .ratiocontainer").append(iframe);
+
+        pageSbd = sbd;
+    }
+
+    var pageSbd = -1;
+    <?php
+        if (isset($_GET["sbd"])): ?>
+            pageSbd = <?php echo $_GET["sbd"]; ?>;
+        <?php endif;
+     ?>
+
+    if (pageSbd != -1) {
+        var toPopup = $(".sbd:contains('" + pageSbd + "')").parents('.video-block');
+        toPopup.trigger('click');
     }
 </script>

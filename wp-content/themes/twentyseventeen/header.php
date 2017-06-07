@@ -27,6 +27,37 @@
 				<meta property="og:title" content="<?php the_title() ?>">
 				<meta property="og:description" content="<?php echo get_field('summary',$postId) ?>">
 				<meta property="og:image" content="<?php echo get_the_post_thumbnail_url($postId) ?>">
+			<?php } else if (get_current_template() == "video-page.php") {
+				if (isset($_GET["sbd"])):
+					$sbd = $_GET["sbd"];
+				else:
+					$sbd = -1;
+				endif;
+				if ($sbd != -1):
+					// if request specific contestant
+					$posts = get_posts(array(
+	                    'post_type' => 'videos',
+	                    'numberposts' => -1,
+	                    'meta_key'		=> 'sbd',
+	                    'meta_value'	=> $sbd
+	                ));
+					if ($posts):
+						foreach ($posts as $post) :
+							setup_postdata($post);
+							$fields = get_fields();
+							$title = get_the_title();
+							$description = $fields["author"];
+							$image = $fields["author_image"];
+							$url = '?sbd=' . $sbd;
+							wp_reset_postdata();
+						endforeach;
+					endif;
+				endif;?>
+				<meta property="og:url" content="<?php echo get_permalink(get_page_by_path('videos')).$url; ?>">
+				<meta property="og:type" content="website">
+				<meta property="og:title" content="<?php echo $title ?>">
+				<meta property="og:description" content="<?php echo $description ?>">
+				<meta property="og:image" content="<?php echo $image ?>">
 			<?php }
 		 ?>
 		<?php wp_head(); ?>

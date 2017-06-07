@@ -104,7 +104,7 @@
     text-align: center;
 }
 
-.modal-vote-button {
+.modal-vote-button, .fb-share {
     padding: 20px 0;
     background-color: #EF4623;
     color: white;
@@ -127,4 +127,12 @@
     color: #EF4623;
     border: solid #EF4623;
     font: 1vw 'Robotol';
+}
+
+@media (min-width: 992px) {
+    .clear:nth-child(8n+0)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
 }

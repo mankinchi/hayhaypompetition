@@ -39,10 +39,11 @@
                     </div>
                     <?php
                         $posts = get_posts(array(
-                            'post_type' => 'videos'
+                            'post_type' => 'videos',
+                            'meta_key'		=> 'main_page',
+                        	'meta_value'	=> 'true'
                         ));
                         foreach ($posts as $post) {
-                            setup_postdata($post);
                             ?>
                             <div class="col-md-4 sub-video">
                                 <div class="video" link="<?php echo get_field('link') ?>">
@@ -63,9 +64,11 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <?php
-                            $posts = get_posts(array(
-                                'post_type' => 'videos'
-                            ));
+                        $posts = get_posts(array(
+                            'post_type' => 'videos',
+                            'meta_key'		=> 'main_page',
+                            'meta_value'	=> 'true'
+                        ));
                             $i = 0;
                             foreach ($posts as $post) {
                                 setup_postdata($post);

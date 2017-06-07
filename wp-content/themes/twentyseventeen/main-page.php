@@ -21,7 +21,7 @@
     get_template_part('template-parts/main-page/intro','modal');
     // get_template_part('template-parts/main-page/contestant','modal');
     get_template_part('template-parts/main-page/news','modal');
-    get_template_part('template-parts/main-page/videos','modal');
+    // get_template_part('template-parts/main-page/videos','modal');
     get_template_part('template-parts/main-page/register','modal');
     get_template_part('template-parts/main-page/quote','modal');
     get_template_part('template-parts/global/footer');

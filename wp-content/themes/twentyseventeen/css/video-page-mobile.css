@@ -1,4 +1,10 @@
 @media (max-width:992px) {
+    .clear:nth-child(4n+0)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
     .play-button i {
         font-size: 5vw;
         background-color: red;
@@ -35,7 +41,7 @@
     .modal-author {
         margin-top: 28%;
         font-size: 4vw;
-        line-height: 0.7;
+        line-height: 1.3;
     }
 
     .modal-bio {
@@ -47,7 +53,7 @@
         margin-bottom: 10px;
     }
 
-    .modal-vote-button, .modal-vote {
+    .modal-vote-button, .modal-vote, .fb-share {
         font-size: 3.5vw;
     }
 }
