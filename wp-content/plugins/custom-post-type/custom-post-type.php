@@ -79,7 +79,8 @@
     add_action('manage_videos_posts_custom_column', 'fill_videos_table_column', 10, 2);
     function fill_videos_table_column($column_name, $post_id) {
         if ($column_name == "vote") {
-            echo get_field("vote", $post_id);
+            $vote = intval(get_field("vote", $post_id));
+            echo $vote;
         }
     }
 
@@ -95,7 +96,7 @@
         if (isset($vars['orderby']) && $vars['orderby'] == 'vote') {
             $vars = array_merge($vars, array(
                 'meta_key' => 'vote',
-                'orderby' => 'meta_value'
+                'orderby' => 'meta_value_num'
             ));
         }
         return $vars;
