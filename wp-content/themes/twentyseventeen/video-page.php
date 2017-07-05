@@ -264,7 +264,9 @@
      ?>
 
     if (pageSbd != -1) {
-        var toPopup = $(".sbd:contains('" + pageSbd + "')").parents('.video-block');
+        var toPopup = $(".sbd").filter(function(){
+            return $(this).text() == pageSbd;
+        }).parents('.video-block');
         toPopup.trigger('click');
     }
 </script>
