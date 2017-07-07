@@ -1,20 +1,7 @@
 @media (max-width:992px) {
     /* Intro modal */
-    .top-header .first {
-        font-size: 9vw;
-    }
-
-    .top-header .second {
-        font-size: 14vw;
-    }
-
-    .top-header .third {
-        font-size: 7vw;
-        margin-bottom: -5px;
-    }
-
-    .top-header .fourth {
-        font-size: 7vw;
+    .top-header {
+        padding-top: 8vh;
     }
 
     /* FLipclock */

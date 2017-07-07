@@ -12,49 +12,164 @@
     $id = 3;
     get_header();
 ?>
+<?php
+    $top20 = array();
+    $others = array();
+    $videos = get_posts(array(
+        'post_type' => 'videos',
+        'numberposts' => -1,
+        'meta_key'		=> 'main_page',
+        'meta_value'	=> 'false',
+        'order' => 'ASC',
+        'orderby' => 'title'
+    ));
+    if ($videos):
+        foreach ($videos as $post) :
+            setup_postdata($post);
+            $pos = get_field("position");
+            if ($pos) {
+                switch ($pos) {
+                    case 'top20':
+                        $top20[] = $post;
+                        break;
+                }
+            } else {
+                $others[] = $post;
+            }
+            wp_reset_postdata();
+        endforeach;
+    endif;
+ ?>
+
 <div class="row page-modal">
     <div class="col-md-8 col-md-offset-2">
         <div class="row">
 			<div class="col-md-12 modal-header">
-				<div class="page-modal-title">Video</div>
+				<div class="page-modal-title">TOP 20</div>
 				<div class="underline"></div>
 			</div>
 		</div>
-        <div class="row">
+        <div class="row top-group">
             <?php
-                $videos = get_posts(array(
-                    'post_type' => 'videos',
-                    'numberposts' => -1,
-                    'meta_key'		=> 'main_page',
-                    'meta_value'	=> 'false',
-                    'orderby' => 'rand'
-                ));
-                if ($videos):
-                    $counter = 0;
-                    foreach ($videos as $post) :
-                        setup_postdata($post);
-                        $fields = get_fields(); ?>
-                            <div class="col-md-3 col-xs-6 video-block">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="cover ratiocontainer ratio11">
-                                            <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
-                                            <div class="play-button"><i class="fa fa-play"></i></div>
+                $group1 = array();
+                $group2 = array();
+                foreach ($top20 as $post) {
+                    setup_postdata($post);
+                    $group = get_field("group");
+                    switch ($group) {
+                        case '1':
+                            $group1[] = $post;
+                            break;
+                        case '2':
+                            $group2[] = $post;
+                            break;
+                    }
+                    wp_reset_postdata();
+                }
+            ?>
+            <div class="col-md-5">
+                <div class="row">
+        			<div class="col-md-12 modal-header">
+        				<div class="page-modal-title">NHÓM 1</div>
+        				<div class="underline"></div>
+        			</div>
+        		</div>
+                <div class="row">
+                    <?php
+                        foreach ($group1 as $post) :
+                            setup_postdata($post);
+                            $fields = get_fields(); ?>
+                                <div class="col-xs-6 video-block">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="cover ratiocontainer ratio11">
+                                                <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
+                                                <div class="play-button"><i class="fa fa-play"></i></div>
+                                            </div>
+                                            <div class="author"><?php the_title(); ?></div>
+                                            <div class="name"><?php echo $fields["author"]; ?></div>
+                                            <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
+                                            <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
+                                            <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
+                                            <div class="vote hidden"><?php echo $fields["vote"]; ?></div>
+                                            <div class="sbd hidden"><?php echo $fields["sbd"]; ?></div>
                                         </div>
-                                        <div class="author"><?php the_title(); ?></div>
-                                        <div class="name"><?php echo $fields["author"]; ?></div>
-                                        <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
-                                        <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
-                                        <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
-                                        <div class="vote hidden"><?php echo $fields["vote"]; ?></div>
-                                        <div class="sbd hidden"><?php echo $fields["sbd"]; ?></div>
                                     </div>
                                 </div>
+                                <div class="clear"></div>
+                            <?php wp_reset_postdata();
+                        endforeach;
+                     ?>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-0"></div>
+            <div class="col-md-5">
+                <div class="row">
+        			<div class="col-md-12 modal-header">
+        				<div class="page-modal-title">NHÓM 2</div>
+        				<div class="underline"></div>
+        			</div>
+        		</div>
+                <div class="row">
+                    <?php
+                        foreach ($group2 as $post) :
+                            setup_postdata($post);
+                            $fields = get_fields(); ?>
+                                <div class="col-xs-6 video-block">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="cover ratiocontainer ratio11">
+                                                <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
+                                                <div class="play-button"><i class="fa fa-play"></i></div>
+                                            </div>
+                                            <div class="author"><?php the_title(); ?></div>
+                                            <div class="name"><?php echo $fields["author"]; ?></div>
+                                            <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
+                                            <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
+                                            <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
+                                            <div class="vote hidden"><?php echo $fields["vote"]; ?></div>
+                                            <div class="sbd hidden"><?php echo $fields["sbd"]; ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            <?php wp_reset_postdata();
+                        endforeach;
+                     ?>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-md-12 modal-header">
+				<div class="page-modal-title">THÍ SINH KHÁC</div>
+				<div class="underline"></div>
+			</div>
+		</div>
+        <div class="row others">
+            <?php
+                foreach ($others as $post) :
+                    setup_postdata($post);
+                    $fields = get_fields(); ?>
+                        <div class="col-md-3 col-xs-6 video-block">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="cover ratiocontainer ratio11">
+                                        <img class="content" src="<?php echo $fields["cover"]; ?>" alt="">
+                                        <div class="play-button"><i class="fa fa-play"></i></div>
+                                    </div>
+                                    <div class="author"><?php the_title(); ?></div>
+                                    <div class="name"><?php echo $fields["author"]; ?></div>
+                                    <div class="author-image-link hidden"><?php echo $fields["author_image"]; ?></div>
+                                    <div class="video-link hidden"><?php echo $fields["link"]; ?></div>
+                                    <div class="bio hidden"><?php echo $fields["bio"]; ?></div>
+                                    <div class="vote hidden"><?php echo $fields["vote"]; ?></div>
+                                    <div class="sbd hidden"><?php echo $fields["sbd"]; ?></div>
+                                </div>
                             </div>
-                            <div class="clear"></div>
-                        <?php wp_reset_postdata();
-                    endforeach;
-                endif;
+                        </div>
+                        <div class="clear"></div>
+                    <?php wp_reset_postdata();
+                endforeach;
              ?>
         </div>
         <div class="modal animated fadeIn" id="modal" role="dialog">

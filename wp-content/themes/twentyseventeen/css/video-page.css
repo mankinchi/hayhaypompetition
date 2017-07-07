@@ -130,7 +130,13 @@
 }
 
 @media (min-width: 992px) {
-    .clear:nth-child(8n+0)::before {
+    .top-group .clear:nth-child(4n+0)::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .others .clear:nth-child(8n+0)::before {
       content: '';
       display: table;
       clear: both;
